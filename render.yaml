@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: pulse-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m app.serve
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false          # Fill in Render dashboard
+      - key: GROQ_API_KEYS
+        sync: false          # Optional — comma-separated keys for rotation
+      - key: ALLOWED_ORIGINS
+        sync: false          # e.g. https://your-app.vercel.app
+      - key: SQLITE_DB_PATH
+        value: data/feedback.db
+      - key: CHROMA_PERSIST_DIR
+        value: data/chroma
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile
+      - key: EMBEDDING_MODEL
+        value: paraphrase-multilingual-MiniLM-L12-v2
+      - key: MAX_RECORDS_PER_SOURCE_PER_RUN
+        value: "200"
+      - key: MAX_CLASSIFICATIONS_PER_RUN
+        value: "900"
+      - key: COLLECTION_HOUR
+        value: "0"
+      - key: COLLECTION_MINUTE
+        value: "0"

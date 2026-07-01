@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — Pulse Feedback Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="margin:0;padding:0;background:#dfe1e6;font-family:'Figtree',sans-serif;-webkit-font-smoothing:antialiased">
+<div style="min-height:100vh;background:radial-gradient(1100px 700px at 88% -5%, rgba(243,205,55,.4), transparent 55%),linear-gradient(118deg,#e9eaee 0%,#f3eeda 52%,#f6efd6 100%);color:#23222a;font-family:'Figtree',sans-serif">
+  <header style="position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:28px;padding:0 28px;height:64px;background:rgba(248,245,236,.82);backdrop-filter:blur(18px);border-bottom:1px solid #e6e0cd">
+    <div style="display:flex;align-items:center;gap:11px;padding-right:8px">
+      <div style="position:relative;width:30px;height:30px;border-radius:9px;background:linear-gradient(150deg,#f4d44b,#e7b71d);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(40,33,10,.22)">
+        <div style="width:9px;height:9px;border-radius:50%;background:#2a2400;animation:pulseDot 1.8s ease-in-out infinite"></div>
+      </div>
+      <div style="line-height:1.05">
+        <div style="font-family:'Figtree',sans-serif;font-weight:700;font-size:16px;letter-spacing:.2px">Pulse</div>
+        <div style="font-size:10px;color:#8d8a7f;letter-spacing:.18em;text-transform:uppercase;font-weight:500">Feedback Intel</div>
+      </div>
+    </div>
+    <nav style="display:flex;align-items:center;gap:4px;background:#f1ebdd;border:1px solid #ece6d4;padding:4px;border-radius:12px">
+      <a href="index.html" style="font-family:'Figtree';font-size:13px;font-weight:600;padding:7px 15px;border:none;border-radius:8px;cursor:pointer;white-space:nowrap;color:#2c2933;background:#fffdf6;box-shadow:0 1px 3px rgba(0,0,0,0.05);text-decoration:none">Dashboard</a>
+      <a href="themes.html" style="font-family:'Figtree';font-size:13px;font-weight:600;padding:7px 15px;border:none;border-radius:8px;cursor:pointer;white-space:nowrap;color:#7d7a71;background:transparent;text-decoration:none">Discovery Themes</a>
+      <a href="chat.html" style="font-family:'Figtree';font-size:13px;font-weight:600;padding:7px 15px;border:none;border-radius:8px;cursor:pointer;white-space:nowrap;color:#7d7a71;background:transparent;text-decoration:none">Research Chat</a>
+    </nav>
+    <div style="flex:1"></div>
+    <!-- Fake sync badge and AM avatar removed -->
+  </header>
+
+  <main style="max-width:1400px;margin:0 auto;padding:26px 28px 64px">
+    <div style="display:flex;flex-direction:column;gap:18px">
+      
+      <!-- header row -->
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap">
+        <div>
+          <div style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#9a7a10;font-weight:700;margin-bottom:6px">PM Dashboard</div>
+          <h1 style="margin:0;font-family:'Figtree',sans-serif;font-size:27px;font-weight:600;letter-spacing:-.4px">Music discovery, decoded</h1>
+          <p style="margin:6px 0 0;color:#86837a;font-size:13.5px">classified & clustered nightly</p>
+        </div>
+      </div>
+
+      <!-- filter bar -->
+      <div style="position:relative;display:flex;align-items:center;gap:10px;padding:11px 14px;background:#f6f1e4;border:1px solid #e7e0ce;border-radius:13px">
+        <span style="font-size:12px;color:#8d8a7f;font-weight:500;padding-right:2px">Filters</span>
+        <select id="filter-date" style="appearance:none;height:34px;padding:0 30px 0 12px;background:#fffdf6 url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1%201L5%205L9%201%22%20stroke%3D%22%239b988c%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%2F%3E%3C%2Fsvg%3E') no-repeat right 12px center;border:1px solid #e6dfcb;border-radius:9px;color:#3c3945;font-family:'Figtree';font-size:12.5px;font-weight:500;cursor:pointer">
+            <option value="all">All Time</option>
+            <option value="7d">Last 7 Days</option>
+            <option value="30d">Last 30 Days</option>
+        </select>
+        <select id="filter-source" style="appearance:none;height:34px;padding:0 30px 0 12px;background:#fffdf6 url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1%201L5%205L9%201%22%20stroke%3D%22%239b988c%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%2F%3E%3C%2Fsvg%3E') no-repeat right 12px center;border:1px solid #e6dfcb;border-radius:9px;color:#3c3945;font-family:'Figtree';font-size:12.5px;font-weight:500;cursor:pointer">
+            <option value="">All Platforms</option>
+            <option value="appstore">App Store</option>
+            <option value="playstore">Play Store</option>
+            <option value="spotify_community">Spotify Community</option>
+        </select>
+        <select id="filter-country" style="appearance:none;height:34px;padding:0 30px 0 12px;background:#fffdf6 url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1%201L5%205L9%201%22%20stroke%3D%22%239b988c%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%2F%3E%3C%2Fsvg%3E') no-repeat right 12px center;border:1px solid #e6dfcb;border-radius:9px;color:#3c3945;font-family:'Figtree';font-size:12.5px;font-weight:500;cursor:pointer">
+            <option value="">All Countries</option>
+            <option value="US">US</option>
+            <option value="GB">GB</option>
+            <option value="IN">IN</option>
+            <option value="DE">DE</option>
+            <option value="BR">BR</option>
+        </select>
+        <select id="filter-sentiment" style="appearance:none;height:34px;padding:0 30px 0 12px;background:#fffdf6 url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1%201L5%205L9%201%22%20stroke%3D%22%239b988c%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%2F%3E%3C%2Fsvg%3E') no-repeat right 12px center;border:1px solid #e6dfcb;border-radius:9px;color:#3c3945;font-family:'Figtree';font-size:12.5px;font-weight:500;cursor:pointer">
+            <option value="">All Sentiments</option>
+            <option value="positive">Positive</option>
+            <option value="negative">Negative</option>
+            <option value="mixed">Mixed</option>
+            <option value="neutral">Neutral</option>
+        </select>
+        <select id="filter-discovery" style="appearance:none;height:34px;padding:0 30px 0 12px;background:#fffdf6 url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1%201L5%205L9%201%22%20stroke%3D%22%239b988c%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%2F%3E%3C%2Fsvg%3E') no-repeat right 12px center;border:1px solid #e6dfcb;border-radius:9px;color:#3c3945;font-family:'Figtree';font-size:12.5px;font-weight:500;cursor:pointer">
+            <option value="">All Topics</option>
+            <option value="true">Music Discovery Only</option>
+        </select>
+      </div>
+
+      <div id="empty-state" style="display:none;padding:40px;background:#fcf9f1;border:1px solid #ece6d4;border-radius:20px;text-align:center;">
+          <h2 style="font-family:'Figtree';font-size:20px;font-weight:600;margin-bottom:10px;">No data found</h2>
+          <p style="color:#86837a;font-size:14px;">Try adjusting your filters or run the collection pipeline to gather data.</p>
+      </div>
+
+      <div id="dashboard-content" style="display:contents">
+        
+        <!-- KPI row -->
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+          <!-- Total Feedback -->
+          <div style="position:relative;padding:18px;background:#fcf9f1;border:1px solid #ece6d4;border-radius:20px;overflow:hidden">
+            <div style="position:absolute;top:0;left:0;width:3px;height:100%;background:#1ed760"></div>
+            <div style="font-size:12px;color:#86837a;font-weight:500;margin-bottom:12px">Classified reviews</div>
+            <div style="display:flex;align-items:baseline;gap:9px">
+              <div id="stat-total" style="font-family:'Figtree',sans-serif;font-size:30px;font-weight:600;letter-spacing:-.6px;line-height:1">-</div>
+            </div>
+            <div style="font-size:11.5px;color:#9b988c;margin-top:9px">Processed</div>
+          </div>
+          
+          <!-- Sources -->
+          <div style="position:relative;padding:18px;background:#fcf9f1;border:1px solid #ece6d4;border-radius:20px;overflow:hidden">
+            <div style="position:absolute;top:0;left:0;width:3px;height:100%;background:#8b5cf6"></div>
+            <div style="font-size:12px;color:#86837a;font-weight:500;margin-bottom:12px">Sources</div>
+            <div style="display:flex;align-items:baseline;gap:9px">
+              <div id="stat-sources" style="font-family:'Figtree',sans-serif;font-size:30px;font-weight:600;letter-spacing:-.6px;line-height:1">-</div>
+            </div>
+            <div style="font-size:11.5px;color:#9b988c;margin-top:9px">Feedback Sources</div>
+          </div>
+          
+          <!-- Negative sentiment -->
+          <div style="position:relative;padding:18px;background:#fcf9f1;border:1px solid #ece6d4;border-radius:20px;overflow:hidden">
+            <div style="position:absolute;top:0;left:0;width:3px;height:100%;background:#ef4444"></div>
+            <div style="font-size:12px;color:#86837a;font-weight:500;margin-bottom:12px">Negative sentiment</div>
+            <div style="display:flex;align-items:baseline;gap:9px">
+              <div id="stat-negative-pct" style="font-family:'Figtree',sans-serif;font-size:30px;font-weight:600;letter-spacing:-.6px;line-height:1">-</div>
+            </div>
+            <div style="font-size:11.5px;color:#9b988c;margin-top:9px">Overall percentage</div>
+          </div>
+        </div>
+
+        <!-- main grid: sentiment + complaints -->
+        <div style="display:grid;grid-template-columns:340px 1fr;gap:14px">
+          <!-- sentiment donut -->
+          <div style="padding:20px;background:#fcf9f1;border:1px solid #ece6d4;border-radius:20px">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px"><span style="font-family:'Figtree';font-size:15px;font-weight:600">Sentiment mix</span></div>
+            <div style="position:relative;height:240px;width:100%">
+              <canvas id="sentimentChart"></canvas>
+            </div>
+          </div>
+
+          <!-- top complaints -->
+          <div style="padding:20px;background:#fcf9f1;border:1px solid #ece6d4;border-radius:20px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+              <div style="display:flex;align-items:center;gap:8px"><span style="font-family:'Figtree';font-size:15px;font-weight:600">Top complaints</span></div>
+            </div>
+            <div id="complaints-container" style="display:flex;flex-direction:column;max-height:300px;overflow-y:auto;padding-right:8px">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- topics + workarounds -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div style="padding:20px;background:#fcf9f1;border:1px solid #ece6d4;border-radius:20px">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px"><span style="font-family:'Figtree';font-size:15px;font-weight:600">Common topics</span></div>
+            <div id="topicsChart" style="display:flex;flex-direction:column;gap:15px;height:240px;overflow-y:auto;padding-right:8px">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+          <div style="padding:20px;background:#fcf9f1;border:1px solid #ece6d4;border-radius:20px">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px"><span style="font-family:'Figtree';font-size:15px;font-weight:600">Workaround tracker</span></div>
+            <div id="workarounds-container" style="display:flex;flex-direction:column;gap:11px;max-height:300px;overflow-y:auto;padding-right:8px">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- trend line chart -->
+        <div style="padding:20px;background:#fcf9f1;border:1px solid #ece6d4;border-radius:20px">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+            <div style="display:flex;align-items:center;gap:8px"><span style="font-family:'Figtree';font-size:15px;font-weight:600">Top topics over time</span><span style="font-size:11.5px;color:#8d8a7f;margin-left:4px">last 30 days</span></div>
+          </div>
+          <div style="height:200px;width:100%;position:relative;">
+            <canvas id="trendsChart"></canvas>
+          </div>
+        </div>
+
+        <!-- quotes feed -->
+        <div style="padding:20px;background:#fcf9f1;border:1px solid #ece6d4;border-radius:20px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px"><span style="font-family:'Figtree';font-size:15px;font-weight:600">Verbatim quotes</span><span style="font-size:11.5px;color:#8d8a7f;margin-left:4px">verified · paginated</span></div>
+          <div id="quotes-container" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-height:600px;overflow-y:auto;padding-right:8px">
+            <!-- Populated by JS -->
+          </div>
+          <button id="btn-load-more" style="display:none;margin-top:20px;padding:8px 16px;background:#fffdf6;border:1px solid #e7e0ce;border-radius:8px;font-family:'Figtree';font-size:13px;font-weight:600;color:#3c3945;cursor:pointer;width:100%;text-align:center;">Load More Quotes</button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  
+  <!-- Sentiment Modal -->
+  <div id="sentiment-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(35,34,42,0.4);backdrop-filter:blur(4px);z-index:100;align-items:center;justify-content:center">
+    <div style="background:#fcf9f1;width:600px;max-width:90%;max-height:80vh;border-radius:20px;border:1px solid #ece6d4;box-shadow:0 10px 40px rgba(0,0,0,0.1);display:flex;flex-direction:column;overflow:hidden">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:20px;border-bottom:1px solid #ece6d4;background:#fcf9f1;z-index:2">
+            <div>
+                <h3 id="sentiment-modal-title" style="margin:0;font-family:'Figtree';font-size:18px;font-weight:600;text-transform:capitalize">Sentiment Reviews</h3>
+                <p id="sentiment-modal-subtitle" style="margin:4px 0 0;font-size:13px;color:#8d8a7f">Loading...</p>
+            </div>
+            <button onclick="document.getElementById('sentiment-modal').style.display='none'" style="background:transparent;border:none;font-size:24px;color:#8d8a7f;cursor:pointer;padding:0;line-height:1">&times;</button>
+        </div>
+        <div id="sentiment-modal-content" style="padding:20px;overflow-y:auto;flex:1;display:flex;flex-direction:column;gap:12px;background:#fffdf6">
+        </div>
+    </div>
+  </div>
+</div>
+  <script src="/static/js/config.js"></script>
+  <script src="/static/js/dashboard.js"></script>
+  <script src="/static/js/intro.js"></script>
+</body>
+</html>

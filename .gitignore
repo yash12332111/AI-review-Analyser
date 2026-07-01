@@ -1,0 +1,26 @@
+# Environment — never commit secrets
+.env
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# SQLite WAL/SHM lock files — ephemeral, not needed in the repo
+*.db-shm
+*.db-wal
+
+# Test databases created by pytest fixtures
+data/test*.db
+
+# Runtime logs
+data/logs/
+
+# Python venv
+.venv/

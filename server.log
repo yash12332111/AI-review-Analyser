@@ -1,0 +1,1294 @@
+INFO:     Started server process [98684]
+INFO:     Waiting for application startup.
+2026-06-20 16:53:31,609 - app.classifier.engine - INFO - Initialized with 3 API keys.
+2026-06-20 16:53:31,609 - app.embeddings.embed_pipeline - INFO - Loading embedding model: paraphrase-multilingual-MiniLM-L12-v2
+2026-06-20 16:53:31,668 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2026-06-20 16:53:31,668 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2026-06-20 16:53:36,631 - app.embeddings.embed_pipeline - INFO - Connecting to ChromaDB at: data/chroma
+2026-06-20 16:53:36,808 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-06-20 16:53:36,822 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2026-06-20 16:53:36,834 - app.embeddings.embed_pipeline - INFO - ChromaDB collection 'feedback' ready — 307 documents
+2026-06-20 16:53:36,870 - app.scheduler.scheduler - INFO - Scheduler started. Nightly Pipeline set to run at 00:00 UTC.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2026-06-20 16:55:01,144 - app.embeddings.embed_pipeline - INFO - Loading embedding model: paraphrase-multilingual-MiniLM-L12-v2
+2026-06-20 16:55:01,149 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2026-06-20 16:55:01,149 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2026-06-20 16:55:06,155 - app.embeddings.embed_pipeline - INFO - Connecting to ChromaDB at: data/chroma
+2026-06-20 16:55:06,191 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-06-20 16:55:06,245 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2026-06-20 16:55:06,258 - app.embeddings.embed_pipeline - INFO - ChromaDB collection 'feedback' ready — 307 documents
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.53it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.53it/s]
+2026-06-20 16:55:06,785 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+INFO:     127.0.0.1:50842 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.01it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.01it/s]
+INFO:     127.0.0.1:50877 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.86it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.86it/s]
+INFO:     127.0.0.1:50899 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 20.97it/s]
+INFO:     127.0.0.1:50899 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.58it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.57it/s]
+INFO:     127.0.0.1:50899 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  5.83it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  5.82it/s]
+INFO:     127.0.0.1:50899 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  5.97it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  5.96it/s]
+2026-06-20 17:05:28,203 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 11.000000 seconds
+INFO:     127.0.0.1:50899 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.77it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.77it/s]
+2026-06-20 17:05:41,347 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2026-06-20 17:05:45,475 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+INFO:     127.0.0.1:50899 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51512 - "GET /static/chat.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51512 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51514 - "GET /static/js/chat.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51514 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51514 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51514 - "GET /static/index.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51514 - "GET /static/js/dashboard.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51514 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51518 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51522 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51512 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51520 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51520 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51526 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:51534 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51530 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51526 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51527 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51535 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51531 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51531 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54555 - "GET /static/index.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54555 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54557 - "GET /static/js/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54566 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54555 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54562 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54557 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54567 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54564 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54564 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55178 - "GET /static/index.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55178 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55185 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55182 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55178 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55179 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55187 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55184 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55184 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55316 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55316 - "GET /static/css/styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55324 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55317 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55321 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55316 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55325 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55323 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55323 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55337 - "GET /static/chat.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55337 - "GET /static/js/chat.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55337 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55343 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55337 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55348 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55349 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55345 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55339 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55339 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55399 - "GET /static/index.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55400 - "GET /static/css/styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55399 - "GET /static/js/themes-shared.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55407 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55404 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55399 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55400 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55408 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55406 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55406 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55406 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55400 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55406 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55399 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55404 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55407 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55408 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55407 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55407 - "GET /static/themes.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55407 - "GET /static/js/themes-page.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55407 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55406 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55404 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55407 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55408 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55400 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55399 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55399 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55411 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55416 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55419 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55411 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55413 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55421 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55417 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55417 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55423 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55423 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55425 - "GET /static/js/themes-page.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55425 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55425 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55432 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55429 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55425 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55423 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55433 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55430 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55430 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55430 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55430 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55423 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55429 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55433 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55425 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55432 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55432 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55432 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55423 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55432 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55425 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55433 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55430 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55429 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55429 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55429 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55432 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55433 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55429 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55430 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55425 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55423 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55423 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55450 - "GET /static/chat.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55450 - "GET /static/css/styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55450 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55450 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55452 - "GET /static/js/themes-page.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55450 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55450 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55454 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55463 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55460 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55454 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55456 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55464 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55461 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55461 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55461 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55525 - "GET /static/themes.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55525 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55527 - "GET /static/js/themes-shared.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55529 - "GET /static/js/themes-page.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55527 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55531 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55531 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55531 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55531 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55533 - "GET /static/js/dashboard.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55540 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55537 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55531 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55533 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55541 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55539 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55539 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55544 - "GET /static/css/styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55544 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55546 - "GET /static/chat.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55546 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55546 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55563 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55560 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55546 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55553 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55564 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55562 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55562 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55569 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55569 - "GET /static/css/styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55569 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55569 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55574 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55579 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55569 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55572 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55580 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55577 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55580 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55593 - "GET /static/index.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55593 - "GET /static/css/styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55594 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55596 - "GET /static/js/dashboard.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55596 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55593 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55600 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55594 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55599 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55599 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55603 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55603 - "GET /static/js/themes-page.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55603 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55659 - "GET /static/themes.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55659 - "GET /static/css/styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55660 - "GET /static/js/themes-shared.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55662 - "GET /static/js/themes-page.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55660 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55664 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55666 - "GET /static/js/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55664 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55669 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55664 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55666 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55672 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55671 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55671 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55734 - "GET /static/index.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55734 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55735 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55737 - "GET /static/js/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55735 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55734 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55737 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55741 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55740 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55740 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55740 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55737 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55740 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55734 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55741 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55735 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55735 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55743 - "GET /static/themes.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55743 - "GET /static/css/styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55745 - "GET /static/js/themes-page.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55745 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55754 - "GET /static/chat.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55754 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:06<00:00,  6.19s/it]Batches: 100%|██████████| 1/1 [00:06<00:00,  6.19s/it]
+INFO:     127.0.0.1:55754 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55776 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55776 - "GET /static/css/styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55778 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55778 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55778 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55778 - "GET /static/js/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55782 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55778 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55776 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55784 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55783 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55783 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55783 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55786 - "GET /static/chat.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55786 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55791 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55786 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55794 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55788 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55792 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55792 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55822 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55822 - "GET /static/css/styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55823 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55825 - "GET /static/js/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55825 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55822 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55823 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55829 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55828 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55828 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55828 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55823 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55828 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55829 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55822 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55825 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55825 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55825 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55829 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55825 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55822 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55823 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55828 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55828 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55828 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55823 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55828 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55822 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55829 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55825 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55825 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55987 - "GET /static/themes.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55987 - "GET /static/css/styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55989 - "GET /static/js/themes-shared.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55991 - "GET /static/js/themes-page.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55989 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55998 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:56000 - "GET /static/js/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55998 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55998 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56004 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56000 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56006 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56005 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56005 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56005 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56005 - "GET /static/chat.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:56005 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56005 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56040 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:56040 - "GET /static/css/styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:56042 - "GET /static/js/themes-shared.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56044 - "GET /static/js/themes-page.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:56042 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56042 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:56042 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56042 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:56042 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56042 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:56042 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56042 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:56042 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56042 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:56042 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56042 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:56042 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56051 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:56053 - "GET /static/js/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:56051 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:56057 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56051 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56053 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56059 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56058 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56058 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56058 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+2026-06-21 00:02:46,688 - app.scheduler.pipeline - INFO - Starting Nightly Pipeline
+2026-06-21 00:02:46,738 - app.scheduler.pipeline - INFO - Pipeline Step 1: Collection
+2026-06-21 00:02:46,740 - app.collectors.orchestrator - INFO - Starting concurrent collection across all sources...
+2026-06-21 00:02:47,337 - app.collectors.trustpilot_collector - WARNING - [trustpilot] HTTP 403 on page 1 — Trustpilot may be blocking the request. This is a non-critical source; pipeline continues.
+2026-06-21 00:02:47,337 - app.collectors.trustpilot_collector - WARNING - [trustpilot] 0 reviews fetched — this is a non-critical optional source, pipeline continues
+2026-06-21 00:02:47,340 - app.collectors.base_collector - INFO - [trustpilot] Fetched 0 raw items
+2026-06-21 00:02:47,340 - app.collectors.base_collector - INFO - [trustpilot] Done — 0 new records inserted
+2026-06-21 00:02:47,735 - app.collectors.appstore_collector - INFO - [appstore/us] Fetched 50 reviews
+2026-06-21 00:02:47,819 - app.collectors.playstore_collector - INFO - [playstore/us(en)] Fetched 200, 200 unique new
+2026-06-21 00:02:49,064 - app.collectors.appstore_collector - INFO - [appstore/gb] Fetched 50 reviews
+2026-06-21 00:02:49,230 - app.collectors.spotify_community_collector - INFO - [spotify_community] Board page: 20 tiles found
+2026-06-21 00:02:49,231 - app.collectors.playstore_collector - INFO - [playstore/gb(en)] Fetched 200, 0 unique new
+2026-06-21 00:02:50,346 - app.collectors.appstore_collector - INFO - [appstore/in] Fetched 50 reviews
+2026-06-21 00:02:51,579 - app.collectors.spotify_community_collector - INFO - [spotify_community] Board page: 20 tiles found
+2026-06-21 00:09:09,431 - app.collectors.spotify_community_collector - INFO - [spotify_community] Discovered 20 thread URLs
+2026-06-21 00:09:09,546 - app.collectors.appstore_collector - WARNING - [appstore/br] Failed: 
+2026-06-21 00:09:10,166 - app.collectors.spotify_community_collector - WARNING - [spotify_community] Failed to scrape thread 'Spotify not playing on Android devices': 
+2026-06-21 00:09:10,967 - app.collectors.appstore_collector - INFO - [appstore/de] Fetched 50 reviews
+2026-06-21 00:09:11,970 - app.collectors.base_collector - INFO - [appstore] Fetched 200 raw items
+2026-06-21 00:09:12,025 - app.collectors.base_collector - INFO - [appstore] Done — 151 new records inserted
+2026-06-21 00:09:14,425 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 2/10: 7 replies from 'Issues with Spotify services (login, subscription ...'
+2026-06-21 00:09:15,629 - app.collectors.playstore_collector - INFO - [playstore/in(hi)] Fetched 200, 200 unique new
+2026-06-21 00:09:16,652 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 3/10: 12 replies from 'CarPlay shows the previous track's album artwork...'
+2026-06-21 00:09:16,961 - app.collectors.playstore_collector - INFO - [playstore/br(pt)] Fetched 200, 200 unique new
+2026-06-21 00:13:53,791 - app.collectors.spotify_community_collector - WARNING - [spotify_community] Failed to scrape thread 'Downtime May 12th, 2026: Some services a': 
+2026-06-21 00:13:54,221 - app.collectors.playstore_collector - INFO - [playstore/de(de)] Fetched 200, 200 unique new
+2026-06-21 00:13:55,223 - app.collectors.base_collector - INFO - [playstore] Fetched 800 raw items
+2026-06-21 00:13:55,287 - app.collectors.base_collector - INFO - [playstore] Done — 310 new records inserted
+2026-06-21 00:13:57,815 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 5/10: 8 replies from '[Desktop] Home page not loading...'
+2026-06-21 00:14:00,119 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 6/10: 11 replies from 'Tracks skipping on desktop...'
+2026-06-21 00:29:45,349 - app.collectors.spotify_community_collector - WARNING - [spotify_community] Failed to scrape thread 'Google Cast/ Chromecast devices unavaila': 
+2026-06-21 00:29:49,192 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 8/10: 10 replies from 'Downtime June 16th: Spotify not loading or showing...'
+2026-06-21 00:40:50,209 - app.collectors.spotify_community_collector - WARNING - [spotify_community] Failed to scrape thread 'Saved tracks not showing up on DJ platfo': 
+2026-06-21 00:40:55,159 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 10/10: 11 replies from 'Downtime [Feb 14th 2026]: Android users getting an...'
+2026-06-21 00:40:56,666 - app.collectors.base_collector - INFO - [spotify_community] Fetched 59 raw items
+2026-06-21 00:40:56,680 - app.collectors.base_collector - INFO - [spotify_community] Done — 0 new records inserted
+2026-06-21 00:40:56,680 - app.collectors.orchestrator - INFO - Concurrent collection complete.
+2026-06-21 00:40:56,680 - app.scheduler.pipeline - INFO - Collection complete: 461 new records
+2026-06-21 00:40:56,680 - app.scheduler.pipeline - INFO - Pipeline Step 2: Classification
+2026-06-21 00:40:56,717 - app.classifier.engine - INFO - Classifying 900 records...
+2026-06-21 01:08:13,241 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.781162 seconds
+2026-06-21 01:25:24,854 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.765050 seconds
+2026-06-21 01:33:10,009 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.959714 seconds
+2026-06-21 01:41:49,808 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.945554 seconds
+2026-06-21 01:41:54,184 - app.classifier.engine - INFO - Progress: 10/900 (7 classified, 3 skipped)
+2026-06-21 01:58:23,813 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.776011 seconds
+2026-06-21 02:14:16,875 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.880546 seconds
+2026-06-21 03:00:46,627 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.956157 seconds
+2026-06-21 03:22:00,078 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.958086 seconds
+2026-06-21 03:22:04,030 - app.classifier.engine - WARNING - Attempt 1/3: Error classifying f4626164-e61c-4b39-aab8-a32ef5426e5a: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knmk7tjtephrkp47dh2ejc3d` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99865, Requested 1024. Please try again in 12m48.096s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-21 03:22:04,032 - app.classifier.engine - WARNING - Daily token limit reached on current key (1/3).
+2026-06-21 03:22:04,063 - app.classifier.engine - INFO - Rotated to API key 2/3
+2026-06-21 03:22:07,268 - app.classifier.engine - INFO - Progress: 20/900 (17 classified, 3 skipped)
+2026-06-21 03:42:37,761 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.967865 seconds
+2026-06-21 03:58:59,206 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.844444 seconds
+2026-06-21 03:59:03,311 - app.classifier.engine - INFO - Progress: 30/900 (25 classified, 5 skipped)
+2026-06-21 04:14:07,137 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.880524 seconds
+2026-06-21 04:29:18,849 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.766096 seconds
+2026-06-21 04:44:26,820 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.878335 seconds
+2026-06-21 04:44:31,010 - app.classifier.engine - INFO - Progress: 40/900 (35 classified, 5 skipped)
+2026-06-21 04:59:52,692 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.859886 seconds
+2026-06-21 04:59:56,331 - app.classifier.engine - WARNING - Attempt 1/3: Error classifying 884f17ee-ce3d-46dd-8434-cbf3057e32e0: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq7z6c1zfzmap595w74rtb9c` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99819, Requested 1845. Please try again in 23m57.696s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-21 04:59:56,333 - app.classifier.engine - WARNING - Daily token limit reached on current key (2/3).
+2026-06-21 04:59:56,356 - app.classifier.engine - INFO - Rotated to API key 3/3
+2026-06-21 04:59:59,409 - app.classifier.engine - INFO - Progress: 50/900 (45 classified, 5 skipped)
+2026-06-21 05:30:44,720 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.946240 seconds
+2026-06-21 05:30:57,618 - app.classifier.engine - INFO - Progress: 60/900 (54 classified, 6 skipped)
+2026-06-21 05:45:27,270 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.897824 seconds
+2026-06-21 05:55:15,940 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.801250 seconds
+2026-06-21 05:55:16,769 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 1.556190 seconds
+2026-06-21 05:55:18,346 - app.classifier.engine - WARNING - Attempt 1/3: Error classifying c6360c8a-9223-4aaf-9e2d-a51cdd8ec0c9: Connection error.
+2026-06-21 05:55:18,346 - app.classifier.engine - INFO - Backing off 2s before retry...
+2026-06-21 05:55:21,411 - app.classifier.engine - INFO - Progress: 70/900 (64 classified, 6 skipped)
+2026-06-21 06:10:31,637 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.820425 seconds
+2026-06-21 06:25:41,231 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.963844 seconds
+2026-06-21 06:40:49,220 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.771635 seconds
+2026-06-21 06:40:50,230 - app.classifier.engine - INFO - Progress: 80/900 (72 classified, 8 skipped)
+2026-06-21 06:40:52,283 - app.classifier.engine - WARNING - Attempt 1/3: Error classifying 37126243-5704-46fa-b52c-29b78fdf13ad: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvfdz3ecfmesrfje966f2srt` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99064, Requested 1838. Please try again in 12m59.328s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-21 06:40:52,284 - app.classifier.engine - WARNING - Daily token limit reached on current key (3/3).
+2026-06-21 06:40:52,284 - app.classifier.engine - WARNING - All keys exhausted — stopping retries for 37126243-5704-46fa-b52c-29b78fdf13ad
+2026-06-21 06:40:54,286 - app.classifier.engine - INFO - Stopping batch — all API keys exhausted. 72 classified, 819 remaining for next run.
+2026-06-21 06:40:54,288 - app.classifier.engine - INFO - Batch complete: 72 classified, 8 skipped (9.9% of 81 attempted)
+2026-06-21 06:40:54,330 - app.scheduler.pipeline - INFO - Classification complete: 72 records classified
+2026-06-21 06:40:54,331 - app.scheduler.pipeline - INFO - Pipeline Step 3: Embedding
+2026-06-21 06:40:54,372 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+2026-06-21 06:41:10,086 - app.embeddings.embed_pipeline - INFO - Embedded 171 records into ChromaDB (skipped 52 short)
+2026-06-21 06:41:10,089 - app.scheduler.pipeline - INFO - Embedding complete: 171 records embedded
+2026-06-21 06:41:10,089 - app.scheduler.pipeline - INFO - Pipeline Step 4: Clustering
+2026-06-21 06:41:10,115 - app.clustering.engine - INFO - Clustering field: topic
+2026-06-21 07:01:40,533 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.787310 seconds
+2026-06-21 07:01:42,484 - app.clustering.engine - INFO - Deleted 10 old 'topic' clusters.
+2026-06-21 07:01:42,488 - app.clustering.engine - INFO -   topic: 18 clusters, 302 noise points from 499 values
+2026-06-21 07:01:42,488 - app.clustering.engine - INFO - Clustering field: core_complaint
+2026-06-21 07:47:26,727 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.783017 seconds
+2026-06-21 07:47:29,242 - app.clustering.engine - INFO - Deleted 5 old 'core_complaint' clusters.
+2026-06-21 07:47:29,243 - app.clustering.engine - INFO -   core_complaint: 9 clusters, 200 noise points from 335 values
+2026-06-21 07:47:29,243 - app.clustering.engine - INFO - Clustering field: behaviour_pattern
+2026-06-21 07:47:32,577 - app.clustering.engine - INFO - Deleted 4 old 'behaviour_pattern' clusters.
+2026-06-21 07:47:32,580 - app.clustering.engine - INFO -   behaviour_pattern: 6 clusters, 77 noise points from 216 values
+2026-06-21 07:47:32,580 - app.clustering.engine - INFO - Clustering field: unmet_need
+2026-06-21 08:17:50,499 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.786652 seconds
+2026-06-21 08:17:52,381 - app.clustering.engine - INFO - Deleted 5 old 'unmet_need' clusters.
+2026-06-21 08:17:52,383 - app.clustering.engine - INFO -   unmet_need: 8 clusters, 239 noise points from 331 values
+2026-06-21 08:17:52,384 - app.clustering.engine - INFO - Clustering complete: 41 clusters across 4 fields.
+2026-06-21 08:17:52,385 - app.scheduler.pipeline - INFO - Clustering complete: 0 clusters found
+2026-06-21 08:17:52,385 - app.scheduler.pipeline - INFO - Pipeline Step 5: Delta Summary
+2026-06-21 08:17:52,413 - app.scheduler.pipeline - INFO - Delta summary complete
+2026-06-21 08:17:52,413 - app.scheduler.pipeline - INFO - Nightly Pipeline finished in 29705.73 seconds with 0 errors
+INFO:     127.0.0.1:60318 - "GET /static/themes.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60318 - "GET /static/css/styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60319 - "GET /static/js/themes-shared.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60321 - "GET /static/js/themes-page.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60319 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60323 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60323 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60325 - "GET /static/js/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60328 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60323 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60325 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60331 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60330 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60330 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60330 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60330 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60402 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60402 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60402 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60407 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60402 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60403 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60409 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60408 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60408 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60408 - "GET /static/index.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60403 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60408 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60407 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60409 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60402 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60402 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60419 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60422 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60419 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60420 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60426 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60424 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60424 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60424 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60420 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60426 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60424 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60422 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60419 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60419 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60441 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60441 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60441 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60443 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60448 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60443 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60445 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60451 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60450 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60450 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60478 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60483 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60478 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60479 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60485 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60484 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60484 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60484 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60479 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60484 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60485 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60483 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60478 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60478 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60478 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60485 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60478 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60483 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60479 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60484 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60479 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60479 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60479 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60483 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60484 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60485 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60478 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60478 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60478 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60484 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60478 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60485 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60479 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60483 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60483 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60483 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60485 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60479 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60483 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60484 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60478 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60478 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60497 - "GET /static/index.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60497 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60498 - "GET /static/js/dashboard.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60498 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60505 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60504 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60501 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60497 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60497 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60497 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60508 - "GET /static/index.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60508 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60509 - "GET /static/js/dashboard.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60513 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60509 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60508 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60514 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60515 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60514 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60514 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60514 - "GET /static/index.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60515 - "GET /static/js/dashboard.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60514 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60508 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60515 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60514 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60513 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60509 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60513 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60509 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60509 - "GET /static/index.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60513 - "GET /static/js/dashboard.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60509 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60509 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60513 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60514 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60515 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60508 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60515 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60508 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60551 - "GET /static/index.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60551 - "GET /static/js/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60554 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60551 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60552 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60558 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60557 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60557 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60576 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60576 - "GET /static/js/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60580 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60576 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60577 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60583 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60582 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60582 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60582 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60577 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60582 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60580 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60583 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60576 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60576 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60576 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60576 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60576 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60580 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60576 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60583 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60577 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60582 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60582 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60626 - "GET /static/index.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60626 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60627 - "GET /static/js/dashboard.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60629 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60632 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60626 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60633 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60627 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60627 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60627 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60638 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60638 - "GET /static/js/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60644 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60638 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60640 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60646 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60645 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60645 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60645 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60640 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60646 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60645 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60644 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60638 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60638 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60668 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60668 - "GET /static/js/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60673 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60668 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60669 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60675 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60674 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60674 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60679 - "GET /api/dashboard/quotes?limit=50&offset=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60679 - "GET /api/dashboard/quotes?limit=50&offset=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60679 - "GET /api/dashboard/quotes?limit=50&offset=150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60679 - "GET /api/dashboard/quotes?limit=50&offset=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60679 - "GET /api/dashboard/quotes?limit=50&offset=250 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60679 - "GET /api/dashboard/quotes?limit=50&offset=300 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60679 - "GET /api/dashboard/quotes?limit=50&offset=350 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60679 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60679 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60679 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60681 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60681 - "GET /static/js/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60687 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60681 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60689 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60683 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60688 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60688 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60691 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60691 - "GET /static/chat.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60691 - "GET /static/js/chat.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60691 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:07<00:00,  7.62s/it]Batches: 100%|██████████| 1/1 [00:07<00:00,  7.63s/it]
+INFO:     127.0.0.1:60691 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60751 - "GET /static/chat.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60751 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.00s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.01s/it]
+INFO:     127.0.0.1:60751 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60752 - "GET /static/chat.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60752 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60757 - "GET /static/js/chat.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60757 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60757 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:04<00:00,  4.85s/it]Batches: 100%|██████████| 1/1 [00:04<00:00,  4.86s/it]
+INFO:     127.0.0.1:61267 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61332 - "GET /static/chat.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61332 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61333 - "GET /static/js/chat.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61332 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61332 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.98s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.98s/it]
+INFO:     127.0.0.1:61337 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61384 - "GET /static/chat.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61385 - "GET /static/js/chat.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61384 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61384 - "GET /static/chat.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61385 - "GET /static/js/chat.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61384 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61385 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61385 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.40s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.40s/it]
+INFO:     127.0.0.1:61385 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61393 - "GET /static/chat.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61393 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61394 - "GET /static/js/chat.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61394 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61394 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.14it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.14it/s]
+INFO:     127.0.0.1:61396 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61400 - "GET /static/chat.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61400 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61402 - "GET /static/js/chat.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61400 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61400 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.23it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.23it/s]
+INFO:     127.0.0.1:61400 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61458 - "GET /static/chat.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61458 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61459 - "GET /static/js/chat.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61458 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61458 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:05<00:00,  5.12s/it]Batches: 100%|██████████| 1/1 [00:05<00:00,  5.12s/it]
+INFO:     127.0.0.1:61458 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61484 - "GET /static/chat.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61484 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61485 - "GET /static/js/chat.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61485 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61485 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:02<00:00,  2.71s/it]Batches: 100%|██████████| 1/1 [00:02<00:00,  2.72s/it]
+INFO:     127.0.0.1:61487 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61541 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:61541 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:61543 - "GET /static/js/themes-page.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:61543 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61545 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:61545 - "GET /static/js/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:61550 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61545 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61547 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61553 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61551 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61551 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61559 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61567 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61562 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61564 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61570 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61568 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61568 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61586 - "GET /api/dashboard/quotes?limit=50&offset=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61586 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61596 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61590 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61592 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61598 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61597 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61597 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61633 - "GET /static/chat.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61633 - "GET /static/js/chat.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61633 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61633 - "GET /static/chat.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61633 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61635 - "GET /static/js/chat.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61633 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61633 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:06<00:00,  6.74s/it]Batches: 100%|██████████| 1/1 [00:06<00:00,  6.75s/it]
+INFO:     127.0.0.1:61639 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61643 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61643 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61643 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61648 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61645 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61643 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61651 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61650 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61650 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61650 - "GET /api/dashboard/quotes?limit=50&offset=50 HTTP/1.1" 200 OK
+2026-06-22 00:06:49,283 - app.scheduler.pipeline - INFO - Starting Nightly Pipeline
+2026-06-22 00:06:49,344 - app.scheduler.pipeline - INFO - Pipeline Step 1: Collection
+2026-06-22 00:06:49,346 - app.collectors.orchestrator - INFO - Starting concurrent collection across all sources...
+2026-06-22 00:06:49,778 - app.collectors.trustpilot_collector - WARNING - [trustpilot] HTTP 403 on page 1 — Trustpilot may be blocking the request. This is a non-critical source; pipeline continues.
+2026-06-22 00:06:49,779 - app.collectors.trustpilot_collector - WARNING - [trustpilot] 0 reviews fetched — this is a non-critical optional source, pipeline continues
+2026-06-22 00:06:49,782 - app.collectors.base_collector - INFO - [trustpilot] Fetched 0 raw items
+2026-06-22 00:06:49,782 - app.collectors.base_collector - INFO - [trustpilot] Done — 0 new records inserted
+2026-06-22 00:06:50,220 - app.collectors.appstore_collector - INFO - [appstore/us] Fetched 50 reviews
+2026-06-22 00:06:50,430 - app.collectors.playstore_collector - INFO - [playstore/us(en)] Fetched 200, 200 unique new
+2026-06-22 00:06:51,552 - app.collectors.spotify_community_collector - INFO - [spotify_community] Board page: 20 tiles found
+2026-06-22 00:06:51,634 - app.collectors.appstore_collector - INFO - [appstore/gb] Fetched 50 reviews
+2026-06-22 00:06:51,820 - app.collectors.playstore_collector - INFO - [playstore/gb(en)] Fetched 200, 4 unique new
+2026-06-22 00:06:52,975 - app.collectors.appstore_collector - INFO - [appstore/in] Fetched 50 reviews
+2026-06-22 00:06:53,641 - app.collectors.playstore_collector - INFO - [playstore/in(hi)] Fetched 200, 200 unique new
+2026-06-22 00:06:53,771 - app.collectors.spotify_community_collector - INFO - [spotify_community] Board page: 20 tiles found
+2026-06-22 00:06:54,278 - app.collectors.appstore_collector - INFO - [appstore/br] Fetched 50 reviews
+2026-06-22 00:06:54,774 - app.collectors.spotify_community_collector - INFO - [spotify_community] Discovered 20 thread URLs
+2026-06-22 00:06:55,010 - app.collectors.playstore_collector - INFO - [playstore/br(pt)] Fetched 200, 200 unique new
+2026-06-22 00:06:55,513 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 1/10: 11 replies from 'Spotify not playing on Android devices...'
+2026-06-22 00:06:55,652 - app.collectors.appstore_collector - INFO - [appstore/de] Fetched 50 reviews
+2026-06-22 00:06:56,346 - app.collectors.playstore_collector - INFO - [playstore/de(de)] Fetched 200, 200 unique new
+2026-06-22 00:06:56,655 - app.collectors.base_collector - INFO - [appstore] Fetched 250 raw items
+2026-06-22 00:06:56,730 - app.collectors.base_collector - INFO - [appstore] Done — 180 new records inserted
+2026-06-22 00:06:57,346 - app.collectors.base_collector - INFO - [playstore] Fetched 804 raw items
+2026-06-22 00:06:57,446 - app.collectors.base_collector - INFO - [playstore] Done — 294 new records inserted
+2026-06-22 00:06:57,681 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 2/10: 12 replies from 'CarPlay shows the previous track's album artwork...'
+2026-06-22 00:06:59,915 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 3/10: 10 replies from 'Downtime May 12th, 2026: Some services are down...'
+2026-06-22 00:07:03,949 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 4/10: 9 replies from 'Issues with Spotify services (login, subscription ...'
+2026-06-22 00:07:06,217 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 5/10: 11 replies from 'Tracks skipping on desktop...'
+2026-06-22 00:07:08,497 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 6/10: 13 replies from 'Google Cast/ Chromecast devices unavailable for Sp...'
+2026-06-22 00:07:11,756 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 7/10: 8 replies from '[Desktop] Home page not loading...'
+2026-06-22 00:07:15,164 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 8/10: 11 replies from 'Downtime [Feb 14th 2026]: Android users getting an...'
+2026-06-22 00:07:17,350 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 9/10: 11 replies from 'Saved tracks not showing up on DJ platforms...'
+2026-06-22 00:07:19,656 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 10/10: 10 replies from 'Downtime June 16th: Spotify not loading or showing...'
+2026-06-22 00:07:21,159 - app.collectors.base_collector - INFO - [spotify_community] Fetched 106 raw items
+2026-06-22 00:07:21,176 - app.collectors.base_collector - INFO - [spotify_community] Done — 2 new records inserted
+2026-06-22 00:07:21,176 - app.collectors.orchestrator - INFO - Concurrent collection complete.
+2026-06-22 00:07:21,176 - app.scheduler.pipeline - INFO - Collection complete: 476 new records
+2026-06-22 00:07:21,176 - app.scheduler.pipeline - INFO - Pipeline Step 2: Classification
+2026-06-22 00:07:21,215 - app.classifier.engine - INFO - Classifying 900 records...
+2026-06-22 00:07:21,215 - app.classifier.engine - INFO - Stopping batch — all API keys exhausted. 0 classified, 900 remaining for next run.
+2026-06-22 00:07:21,216 - app.classifier.engine - INFO - Batch complete: 0 classified, 0 skipped (0.0% of 0 attempted)
+2026-06-22 00:07:21,216 - app.scheduler.pipeline - INFO - Classification complete: 0 records classified
+2026-06-22 00:07:21,216 - app.scheduler.pipeline - INFO - Pipeline Step 3: Embedding
+2026-06-22 00:07:21,259 - app.embeddings.embed_pipeline - INFO - No records met the minimum length for embedding.
+2026-06-22 00:07:21,259 - app.scheduler.pipeline - INFO - Embedding complete: 0 records embedded
+2026-06-22 00:07:21,259 - app.scheduler.pipeline - INFO - Pipeline Step 4: Clustering
+2026-06-22 00:07:21,260 - app.clustering.engine - INFO - Clustering field: topic
+2026-06-22 00:07:36,378 - app.clustering.engine - INFO - Deleted 18 old 'topic' clusters.
+2026-06-22 00:07:36,383 - app.clustering.engine - INFO -   topic: 18 clusters, 302 noise points from 499 values
+2026-06-22 00:07:36,383 - app.clustering.engine - INFO - Clustering field: core_complaint
+2026-06-22 00:07:39,345 - app.clustering.engine - INFO - Deleted 9 old 'core_complaint' clusters.
+2026-06-22 00:07:39,347 - app.clustering.engine - INFO -   core_complaint: 9 clusters, 200 noise points from 335 values
+2026-06-22 00:07:39,347 - app.clustering.engine - INFO - Clustering field: behaviour_pattern
+2026-06-22 00:07:40,471 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-22 00:07:42,768 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-22 00:07:45,086 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-22 00:07:47,344 - app.clustering.engine - INFO - Deleted 6 old 'behaviour_pattern' clusters.
+2026-06-22 00:07:47,346 - app.clustering.engine - INFO -   behaviour_pattern: 6 clusters, 77 noise points from 216 values
+2026-06-22 00:07:47,347 - app.clustering.engine - INFO - Clustering field: unmet_need
+2026-06-22 00:07:48,336 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-22 00:07:50,842 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-22 00:07:53,054 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-22 00:07:55,352 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-22 00:07:57,656 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-22 00:07:59,962 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-22 00:08:02,512 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-22 00:08:04,696 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-22 00:08:06,945 - app.clustering.engine - INFO - Deleted 8 old 'unmet_need' clusters.
+2026-06-22 00:08:06,946 - app.clustering.engine - INFO -   unmet_need: 8 clusters, 239 noise points from 331 values
+2026-06-22 00:08:06,947 - app.clustering.engine - INFO - Clustering complete: 41 clusters across 4 fields.
+2026-06-22 00:08:06,947 - app.scheduler.pipeline - INFO - Clustering complete: 0 clusters found
+2026-06-22 00:08:06,947 - app.scheduler.pipeline - INFO - Pipeline Step 5: Delta Summary
+2026-06-22 00:08:06,968 - app.scheduler.pipeline - INFO - Delta summary complete
+2026-06-22 00:08:06,968 - app.scheduler.pipeline - INFO - Nightly Pipeline finished in 77.71 seconds with 0 errors
+INFO:     127.0.0.1:52176 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:52176 - "GET /static/css/styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:52177 - "GET /static/js/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:52182 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52177 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52176 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52184 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52183 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52183 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52476 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:52478 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:52476 - "GET /static/js/themes-page.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:52476 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52598 - "GET /static/chat.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:52598 - "GET /static/js/chat.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:52598 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:08<00:00,  8.30s/it]Batches: 100%|██████████| 1/1 [00:08<00:00,  8.31s/it]
+INFO:     127.0.0.1:52600 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.86it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.86it/s]
+INFO:     127.0.0.1:52718 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.91it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.91it/s]
+INFO:     127.0.0.1:52767 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52856 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52864 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52859 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52866 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52865 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52865 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53083 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53086 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53118 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53086 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53109 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53122 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53120 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53120 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53453 - "GET /api/dashboard/quotes?date_from=2026-06-15&limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53449 - "GET /api/dashboard/complaints?date_from=2026-06-15 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53447 - "GET /api/dashboard/summary?date_from=2026-06-15 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53448 - "GET /api/dashboard/topics?date_from=2026-06-15 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53452 - "GET /api/dashboard/workarounds?date_from=2026-06-15 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53448 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53487 - "GET /api/dashboard/quotes?date_from=2026-05-23&limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53484 - "GET /api/dashboard/complaints?date_from=2026-05-23 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53481 - "GET /api/dashboard/summary?date_from=2026-05-23 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53483 - "GET /api/dashboard/topics?date_from=2026-05-23 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53486 - "GET /api/dashboard/workarounds?date_from=2026-05-23 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53486 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53517 - "GET /api/dashboard/quotes?date_from=2026-06-15&limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53514 - "GET /api/dashboard/complaints?date_from=2026-06-15 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53510 - "GET /api/dashboard/summary?date_from=2026-06-15 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53512 - "GET /api/dashboard/topics?date_from=2026-06-15 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53516 - "GET /api/dashboard/workarounds?date_from=2026-06-15 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53516 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53514 - "GET /api/dashboard/quotes?date_from=2026-05-23&limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53517 - "GET /api/dashboard/complaints?date_from=2026-05-23 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53516 - "GET /api/dashboard/summary?date_from=2026-05-23 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53512 - "GET /api/dashboard/topics?date_from=2026-05-23 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53510 - "GET /api/dashboard/workarounds?date_from=2026-05-23 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53510 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53555 - "GET /api/dashboard/quotes?date_from=2026-06-15&limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53548 - "GET /api/dashboard/summary?date_from=2026-06-15 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53553 - "GET /api/dashboard/complaints?date_from=2026-06-15 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53549 - "GET /api/dashboard/topics?date_from=2026-06-15 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53554 - "GET /api/dashboard/workarounds?date_from=2026-06-15 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53554 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53664 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53666 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53712 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53666 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53704 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53714 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53713 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53713 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53713 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53737 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53734 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53713 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53740 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53739 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53812 - "GET /api/dashboard/complaints?sentiment=positive HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53809 - "GET /api/dashboard/summary?sentiment=positive HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53815 - "GET /api/dashboard/quotes?sentiment=positive&limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53811 - "GET /api/dashboard/topics?sentiment=positive HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53814 - "GET /api/dashboard/workarounds?sentiment=positive HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53814 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53840 - "GET /api/dashboard/complaints?sentiment=mixed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53837 - "GET /api/dashboard/summary?sentiment=mixed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53839 - "GET /api/dashboard/topics?sentiment=mixed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53843 - "GET /api/dashboard/quotes?sentiment=mixed&limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53842 - "GET /api/dashboard/workarounds?sentiment=mixed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53842 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53839 - "GET /api/dashboard/complaints?sentiment=neutral HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53840 - "GET /api/dashboard/quotes?sentiment=neutral&limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53842 - "GET /api/dashboard/summary?sentiment=neutral HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53843 - "GET /api/dashboard/topics?sentiment=neutral HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53837 - "GET /api/dashboard/workarounds?sentiment=neutral HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53837 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53842 - "GET /api/dashboard/complaints?sentiment=negative HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53843 - "GET /api/dashboard/topics?sentiment=negative HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53837 - "GET /api/dashboard/summary?sentiment=negative HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53839 - "GET /api/dashboard/quotes?sentiment=negative&limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53840 - "GET /api/dashboard/workarounds?sentiment=negative HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53840 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53837 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53840 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53839 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53842 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53843 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53843 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53977 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53977 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53989 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53979 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53991 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53990 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53990 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+2026-06-23 00:11:51,145 - app.scheduler.pipeline - INFO - Starting Nightly Pipeline
+2026-06-23 00:11:51,183 - app.scheduler.pipeline - INFO - Pipeline Step 1: Collection
+2026-06-23 00:11:51,184 - app.collectors.orchestrator - INFO - Starting concurrent collection across all sources...
+2026-06-23 00:11:52,118 - app.collectors.trustpilot_collector - WARNING - [trustpilot] HTTP 403 on page 1 — Trustpilot may be blocking the request. This is a non-critical source; pipeline continues.
+2026-06-23 00:11:52,119 - app.collectors.trustpilot_collector - WARNING - [trustpilot] 0 reviews fetched — this is a non-critical optional source, pipeline continues
+2026-06-23 00:11:52,123 - app.collectors.base_collector - INFO - [trustpilot] Fetched 0 raw items
+2026-06-23 00:11:52,124 - app.collectors.base_collector - INFO - [trustpilot] Done — 0 new records inserted
+2026-06-23 00:11:52,301 - app.collectors.playstore_collector - INFO - [playstore/us(en)] Fetched 200, 200 unique new
+2026-06-23 00:11:52,329 - app.collectors.appstore_collector - INFO - [appstore/us] Fetched 50 reviews
+2026-06-23 00:11:53,735 - app.collectors.spotify_community_collector - INFO - [spotify_community] Board page: 20 tiles found
+2026-06-23 00:11:53,766 - app.collectors.playstore_collector - INFO - [playstore/gb(en)] Fetched 200, 0 unique new
+2026-06-23 00:11:53,801 - app.collectors.appstore_collector - INFO - [appstore/gb] Fetched 50 reviews
+2026-06-23 00:11:55,165 - app.collectors.appstore_collector - INFO - [appstore/in] Fetched 50 reviews
+2026-06-23 00:23:40,160 - app.collectors.spotify_community_collector - WARNING - [spotify_community] Failed board page: 
+2026-06-23 00:23:41,163 - app.collectors.spotify_community_collector - INFO - [spotify_community] Discovered 20 thread URLs
+2026-06-23 00:23:43,886 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 1/10: 11 replies from 'Spotify not playing on Android devices...'
+2026-06-23 00:23:46,182 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 2/10: 12 replies from 'CarPlay shows the previous track's album artwork...'
+2026-06-23 00:23:48,456 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 3/10: 10 replies from 'Downtime May 12th, 2026: Some services are down...'
+2026-06-23 00:23:50,725 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 4/10: 11 replies from 'Tracks skipping on desktop...'
+2026-06-23 00:23:52,978 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 5/10: 13 replies from 'Google Cast/ Chromecast devices unavailable for Sp...'
+2026-06-23 00:23:55,306 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 6/10: 8 replies from '[Desktop] Home page not loading...'
+2026-06-23 00:23:57,544 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 7/10: 9 replies from 'Issues with Spotify services (login, subscription ...'
+2026-06-23 00:24:00,255 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 8/10: 11 replies from 'Downtime [Feb 14th 2026]: Android users getting an...'
+2026-06-23 00:24:02,670 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 9/10: 11 replies from 'Saved tracks not showing up on DJ platforms...'
+2026-06-23 00:24:05,055 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 10/10: 10 replies from 'Downtime June 16th: Spotify not loading or showing...'
+2026-06-23 00:24:06,558 - app.collectors.base_collector - INFO - [spotify_community] Fetched 106 raw items
+2026-06-23 00:24:06,583 - app.collectors.base_collector - INFO - [spotify_community] Done — 0 new records inserted
+2026-06-23 00:24:10,160 - app.collectors.appstore_collector - WARNING - [appstore/br] Failed: 
+2026-06-23 00:24:11,640 - app.collectors.appstore_collector - INFO - [appstore/de] Fetched 50 reviews
+2026-06-23 00:24:12,644 - app.collectors.base_collector - INFO - [appstore] Fetched 200 raw items
+2026-06-23 00:24:12,708 - app.collectors.base_collector - INFO - [appstore] Done — 143 new records inserted
+2026-06-24 00:00:00,071 - apscheduler.scheduler - WARNING - Execution of job "Nightly Feedback Pipeline (trigger: cron[hour='0', minute='0'], next run at: 2026-06-24 00:00:00 IST)" skipped: maximum number of running instances reached (1)
+2026-06-24 17:40:43,951 - app.collectors.playstore_collector - INFO - [playstore/in(hi)] Fetched 200, 200 unique new
+2026-06-24 17:40:45,804 - app.collectors.playstore_collector - INFO - [playstore/br(pt)] Fetched 200, 200 unique new
+2026-06-24 17:40:48,090 - app.collectors.playstore_collector - INFO - [playstore/de(de)] Fetched 200, 200 unique new
+2026-06-24 17:40:49,478 - app.collectors.base_collector - INFO - [playstore] Fetched 800 raw items
+2026-06-24 17:40:50,271 - app.collectors.base_collector - INFO - [playstore] Done — 358 new records inserted
+2026-06-24 17:40:50,284 - app.collectors.orchestrator - INFO - Concurrent collection complete.
+2026-06-24 17:40:50,286 - app.scheduler.pipeline - INFO - Collection complete: 501 new records
+2026-06-24 17:40:50,288 - app.scheduler.pipeline - INFO - Pipeline Step 2: Classification
+2026-06-24 17:40:50,758 - app.classifier.engine - INFO - Classifying 900 records...
+2026-06-24 17:40:50,767 - app.classifier.engine - INFO - Stopping batch — all API keys exhausted. 0 classified, 900 remaining for next run.
+2026-06-24 17:40:50,769 - app.classifier.engine - INFO - Batch complete: 0 classified, 0 skipped (0.0% of 0 attempted)
+2026-06-24 17:40:50,788 - app.scheduler.pipeline - INFO - Classification complete: 0 records classified
+2026-06-24 17:40:50,790 - app.scheduler.pipeline - INFO - Pipeline Step 3: Embedding
+2026-06-24 17:40:51,523 - app.embeddings.embed_pipeline - INFO - No records met the minimum length for embedding.
+2026-06-24 17:40:51,566 - app.scheduler.pipeline - INFO - Embedding complete: 0 records embedded
+2026-06-24 17:40:51,567 - app.scheduler.pipeline - INFO - Pipeline Step 4: Clustering
+2026-06-24 17:40:51,589 - app.clustering.engine - INFO - Clustering field: topic
+2026-06-24 17:41:11,822 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.825640 seconds
+2026-06-24 17:41:12,773 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 1.878326 seconds
+2026-06-24 17:41:14,721 - app.clustering.engine - ERROR - Groq labelling failed: Connection error.
+2026-06-24 17:41:14,826 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.766537 seconds
+2026-06-24 17:41:15,601 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 1.939158 seconds
+2026-06-24 17:41:17,557 - app.clustering.engine - ERROR - Groq labelling failed: Connection error.
+2026-06-24 17:41:17,591 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.877939 seconds
+2026-06-24 17:56:59,297 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 1.984495 seconds
+2026-06-24 17:57:01,311 - app.clustering.engine - ERROR - Groq labelling failed: Connection error.
+2026-06-24 17:57:01,351 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.878137 seconds
+2026-06-24 17:57:02,249 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 1.566336 seconds
+2026-06-24 17:57:03,829 - app.clustering.engine - ERROR - Groq labelling failed: Connection error.
+2026-06-24 17:57:03,855 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.761315 seconds
+2026-06-24 17:57:53,099 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 1.933134 seconds
+2026-06-24 17:57:55,063 - app.clustering.engine - ERROR - Groq labelling failed: Connection error.
+2026-06-24 17:57:55,083 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.870765 seconds
+2026-06-24 17:57:55,968 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 1.993395 seconds
+2026-06-24 17:57:57,989 - app.clustering.engine - ERROR - Groq labelling failed: Connection error.
+2026-06-24 17:57:58,002 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.962562 seconds
+2026-06-24 17:57:58,979 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 1.864141 seconds
+2026-06-24 17:58:00,854 - app.clustering.engine - ERROR - Groq labelling failed: Connection error.
+2026-06-24 17:58:00,862 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.802256 seconds
+2026-06-24 17:58:19,222 - app.clustering.engine - INFO - Deleted 18 old 'topic' clusters.
+2026-06-24 17:58:19,237 - app.clustering.engine - INFO -   topic: 18 clusters, 302 noise points from 499 values
+2026-06-24 17:58:19,238 - app.clustering.engine - INFO - Clustering field: core_complaint
+2026-06-24 18:09:17,506 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.865611 seconds
+2026-06-24 18:09:20,173 - app.clustering.engine - INFO - Deleted 9 old 'core_complaint' clusters.
+2026-06-24 18:09:20,177 - app.clustering.engine - INFO -   core_complaint: 9 clusters, 200 noise points from 335 values
+2026-06-24 18:09:20,177 - app.clustering.engine - INFO - Clustering field: behaviour_pattern
+2026-06-24 18:09:31,701 - app.clustering.engine - INFO - Deleted 6 old 'behaviour_pattern' clusters.
+2026-06-24 18:09:31,712 - app.clustering.engine - INFO -   behaviour_pattern: 6 clusters, 77 noise points from 216 values
+2026-06-24 18:09:31,712 - app.clustering.engine - INFO - Clustering field: unmet_need
+2026-06-24 18:09:35,919 - app.clustering.engine - INFO - Deleted 8 old 'unmet_need' clusters.
+2026-06-24 18:09:35,933 - app.clustering.engine - INFO -   unmet_need: 8 clusters, 239 noise points from 331 values
+2026-06-24 18:09:35,934 - app.clustering.engine - INFO - Clustering complete: 41 clusters across 4 fields.
+2026-06-24 18:09:35,935 - app.scheduler.pipeline - INFO - Clustering complete: 0 clusters found
+2026-06-24 18:09:35,935 - app.scheduler.pipeline - INFO - Pipeline Step 5: Delta Summary
+2026-06-24 18:09:35,966 - app.scheduler.pipeline - INFO - Delta summary complete
+2026-06-24 18:09:35,966 - app.scheduler.pipeline - INFO - Nightly Pipeline finished in 151064.82 seconds with 0 errors
+2026-06-25 00:10:39,369 - app.scheduler.pipeline - INFO - Starting Nightly Pipeline
+2026-06-25 00:10:39,379 - app.scheduler.pipeline - INFO - Pipeline Step 1: Collection
+2026-06-25 00:10:39,385 - app.collectors.orchestrator - INFO - Starting concurrent collection across all sources...
+2026-06-25 00:10:40,497 - app.collectors.trustpilot_collector - WARNING - [trustpilot] HTTP 403 on page 1 — Trustpilot may be blocking the request. This is a non-critical source; pipeline continues.
+2026-06-25 00:10:40,502 - app.collectors.trustpilot_collector - WARNING - [trustpilot] 0 reviews fetched — this is a non-critical optional source, pipeline continues
+2026-06-25 00:10:40,506 - app.collectors.base_collector - INFO - [trustpilot] Fetched 0 raw items
+2026-06-25 00:10:40,506 - app.collectors.base_collector - INFO - [trustpilot] Done — 0 new records inserted
+2026-06-25 00:10:40,569 - app.collectors.appstore_collector - INFO - [appstore/us] Fetched 50 reviews
+2026-06-25 00:10:40,650 - app.collectors.playstore_collector - INFO - [playstore/us(en)] Fetched 200, 200 unique new
+2026-06-25 00:10:41,937 - app.collectors.spotify_community_collector - INFO - [spotify_community] Board page: 20 tiles found
+2026-06-25 00:10:41,968 - app.collectors.appstore_collector - INFO - [appstore/gb] Fetched 50 reviews
+2026-06-25 00:10:42,008 - app.collectors.playstore_collector - INFO - [playstore/gb(en)] Fetched 200, 0 unique new
+2026-06-25 00:10:43,288 - app.collectors.appstore_collector - INFO - [appstore/in] Fetched 50 reviews
+2026-06-25 00:20:54,996 - app.collectors.spotify_community_collector - WARNING - [spotify_community] Failed board page: 
+2026-06-25 00:20:55,062 - app.collectors.appstore_collector - WARNING - [appstore/br] Failed: 
+2026-06-25 00:20:56,063 - app.collectors.spotify_community_collector - INFO - [spotify_community] Discovered 20 thread URLs
+2026-06-25 00:20:56,753 - app.collectors.appstore_collector - INFO - [appstore/de] Fetched 50 reviews
+2026-06-25 00:20:57,484 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 1/10: 11 replies from 'Spotify not playing on Android devices...'
+2026-06-25 00:20:57,756 - app.collectors.base_collector - INFO - [appstore] Fetched 200 raw items
+2026-06-25 00:20:57,837 - app.collectors.base_collector - INFO - [appstore] Done — 162 new records inserted
+2026-06-25 00:21:00,197 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 2/10: 12 replies from 'CarPlay shows the previous track's album artwork...'
+2026-06-25 00:21:02,383 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 3/10: 10 replies from 'Downtime May 12th, 2026: Some services are down...'
+2026-06-25 00:21:04,770 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 4/10: 11 replies from 'Tracks skipping on desktop...'
+2026-06-25 00:21:09,401 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 5/10: 13 replies from 'Google Cast/ Chromecast devices unavailable for Sp...'
+2026-06-25 00:21:11,714 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 6/10: 8 replies from '[Desktop] Home page not loading...'
+2026-06-25 00:21:14,143 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 7/10: 11 replies from 'Downtime [Feb 14th 2026]: Android users getting an...'
+2026-06-25 00:21:16,536 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 8/10: 11 replies from 'Saved tracks not showing up on DJ platforms...'
+2026-06-25 00:21:18,802 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 9/10: 9 replies from 'Issues with Spotify services (login, subscription ...'
+2026-06-25 00:21:21,235 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 10/10: 11 replies from 'Basic plans Users are getting ads...'
+2026-06-25 00:21:22,747 - app.collectors.base_collector - INFO - [spotify_community] Fetched 107 raw items
+2026-06-25 00:21:22,781 - app.collectors.base_collector - INFO - [spotify_community] Done — 11 new records inserted
+2026-06-25 19:13:25,803 - app.collectors.playstore_collector - INFO - [playstore/in(hi)] Fetched 200, 200 unique new
+2026-06-25 19:13:28,530 - app.collectors.playstore_collector - INFO - [playstore/br(pt)] Fetched 200, 200 unique new
+2026-06-25 19:13:30,445 - app.collectors.playstore_collector - INFO - [playstore/de(de)] Fetched 200, 200 unique new
+2026-06-25 19:13:31,453 - app.collectors.base_collector - INFO - [playstore] Fetched 800 raw items
+2026-06-25 19:13:31,571 - app.collectors.base_collector - INFO - [playstore] Done — 315 new records inserted
+2026-06-25 19:13:31,575 - app.collectors.orchestrator - INFO - Concurrent collection complete.
+2026-06-25 19:13:31,576 - app.scheduler.pipeline - INFO - Collection complete: 488 new records
+2026-06-25 19:13:31,577 - app.scheduler.pipeline - INFO - Pipeline Step 2: Classification
+2026-06-25 19:13:31,644 - app.classifier.engine - INFO - Classifying 900 records...
+2026-06-25 19:13:31,646 - app.classifier.engine - INFO - Stopping batch — all API keys exhausted. 0 classified, 900 remaining for next run.
+2026-06-25 19:13:31,647 - app.classifier.engine - INFO - Batch complete: 0 classified, 0 skipped (0.0% of 0 attempted)
+2026-06-25 19:13:31,648 - app.scheduler.pipeline - INFO - Classification complete: 0 records classified
+2026-06-25 19:13:31,648 - app.scheduler.pipeline - INFO - Pipeline Step 3: Embedding
+2026-06-25 19:13:31,769 - app.embeddings.embed_pipeline - INFO - No records met the minimum length for embedding.
+2026-06-25 19:13:31,769 - app.scheduler.pipeline - INFO - Embedding complete: 0 records embedded
+2026-06-25 19:13:31,769 - app.scheduler.pipeline - INFO - Pipeline Step 4: Clustering
+2026-06-25 19:13:31,776 - app.clustering.engine - INFO - Clustering field: topic
+2026-06-25 19:17:07,913 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.921927 seconds
+2026-06-25 19:17:08,891 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 1.517680 seconds
+2026-06-25 19:17:12,684 - app.clustering.engine - INFO - Deleted 18 old 'topic' clusters.
+2026-06-25 19:17:12,694 - app.clustering.engine - INFO -   topic: 18 clusters, 302 noise points from 499 values
+2026-06-25 19:17:12,694 - app.clustering.engine - INFO - Clustering field: core_complaint
+2026-06-25 19:17:20,445 - app.clustering.engine - INFO - Deleted 9 old 'core_complaint' clusters.
+2026-06-25 19:17:20,448 - app.clustering.engine - INFO -   core_complaint: 9 clusters, 200 noise points from 335 values
+2026-06-25 19:17:20,449 - app.clustering.engine - INFO - Clustering field: behaviour_pattern
+2026-06-25 19:17:22,505 - app.clustering.engine - INFO - Deleted 6 old 'behaviour_pattern' clusters.
+2026-06-25 19:17:22,507 - app.clustering.engine - INFO -   behaviour_pattern: 6 clusters, 77 noise points from 216 values
+2026-06-25 19:17:22,507 - app.clustering.engine - INFO - Clustering field: unmet_need
+2026-06-25 19:19:09,378 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.892813 seconds
+2026-06-25 19:19:11,018 - app.clustering.engine - INFO - Deleted 8 old 'unmet_need' clusters.
+2026-06-25 19:19:11,021 - app.clustering.engine - INFO -   unmet_need: 8 clusters, 239 noise points from 331 values
+2026-06-25 19:19:11,039 - app.clustering.engine - INFO - Clustering complete: 41 clusters across 4 fields.
+2026-06-25 19:19:11,045 - app.scheduler.pipeline - INFO - Clustering complete: 0 clusters found
+2026-06-25 19:19:11,046 - app.scheduler.pipeline - INFO - Pipeline Step 5: Delta Summary
+2026-06-25 19:19:11,210 - app.scheduler.pipeline - INFO - Delta summary complete
+2026-06-25 19:19:11,210 - app.scheduler.pipeline - INFO - Nightly Pipeline finished in 68911.85 seconds with 0 errors
+2026-06-26 00:00:00,092 - app.scheduler.pipeline - INFO - Starting Nightly Pipeline
+2026-06-26 00:00:00,113 - app.scheduler.pipeline - INFO - Pipeline Step 1: Collection
+2026-06-26 00:00:00,124 - app.collectors.orchestrator - INFO - Starting concurrent collection across all sources...
+2026-06-26 00:00:01,067 - app.collectors.trustpilot_collector - WARNING - [trustpilot] HTTP 403 on page 1 — Trustpilot may be blocking the request. This is a non-critical source; pipeline continues.
+2026-06-26 00:00:01,075 - app.collectors.trustpilot_collector - WARNING - [trustpilot] 0 reviews fetched — this is a non-critical optional source, pipeline continues
+2026-06-26 00:00:01,080 - app.collectors.base_collector - INFO - [trustpilot] Fetched 0 raw items
+2026-06-26 00:00:01,080 - app.collectors.base_collector - INFO - [trustpilot] Done — 0 new records inserted
+2026-06-26 00:00:01,382 - app.collectors.playstore_collector - INFO - [playstore/us(en)] Fetched 200, 200 unique new
+2026-06-26 00:00:01,567 - app.collectors.appstore_collector - INFO - [appstore/us] Fetched 50 reviews
+2026-06-26 00:00:02,845 - app.collectors.playstore_collector - INFO - [playstore/gb(en)] Fetched 200, 0 unique new
+2026-06-26 00:00:03,009 - app.collectors.appstore_collector - INFO - [appstore/gb] Fetched 50 reviews
+2026-06-26 00:00:04,092 - app.collectors.spotify_community_collector - INFO - [spotify_community] Board page: 20 tiles found
+2026-06-26 00:00:05,028 - app.collectors.playstore_collector - INFO - [playstore/in(hi)] Fetched 200, 200 unique new
+2026-06-26 00:00:05,477 - app.collectors.appstore_collector - INFO - [appstore/in] Fetched 50 reviews
+2026-06-26 00:00:06,355 - app.collectors.playstore_collector - INFO - [playstore/br(pt)] Fetched 200, 200 unique new
+2026-06-26 00:00:06,905 - app.collectors.appstore_collector - INFO - [appstore/br] Fetched 50 reviews
+2026-06-26 00:00:09,754 - app.collectors.spotify_community_collector - INFO - [spotify_community] Board page: 20 tiles found
+2026-06-26 00:00:10,487 - app.collectors.playstore_collector - INFO - [playstore/de(de)] Fetched 200, 200 unique new
+2026-06-26 00:00:10,755 - app.collectors.spotify_community_collector - INFO - [spotify_community] Discovered 20 thread URLs
+2026-06-26 00:00:10,818 - app.collectors.appstore_collector - INFO - [appstore/de] Fetched 50 reviews
+2026-06-26 00:00:11,489 - app.collectors.base_collector - INFO - [playstore] Fetched 800 raw items
+2026-06-26 00:00:11,575 - app.collectors.base_collector - INFO - [playstore] Done — 167 new records inserted
+2026-06-26 00:00:11,820 - app.collectors.base_collector - INFO - [appstore] Fetched 250 raw items
+2026-06-26 00:00:11,866 - app.collectors.base_collector - INFO - [appstore] Done — 187 new records inserted
+2026-06-26 00:00:13,223 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 1/10: 11 replies from 'Spotify not playing on Android devices...'
+2026-06-26 00:00:16,086 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 2/10: 12 replies from 'CarPlay shows the previous track's album artwork...'
+2026-06-26 00:00:18,959 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 3/10: 10 replies from 'Downtime May 12th, 2026: Some services are down...'
+2026-06-26 00:00:21,900 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 4/10: 11 replies from 'Tracks skipping on desktop...'
+2026-06-26 00:00:25,811 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 5/10: 13 replies from 'Google Cast/ Chromecast devices unavailable for Sp...'
+2026-06-26 00:00:28,960 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 6/10: 8 replies from '[Desktop] Home page not loading...'
+2026-06-26 00:00:32,252 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 7/10: 11 replies from 'Downtime [Feb 14th 2026]: Android users getting an...'
+2026-06-26 00:00:35,712 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 8/10: 11 replies from 'Saved tracks not showing up on DJ platforms...'
+2026-06-26 00:00:39,033 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 9/10: 11 replies from 'Basic plans Users are getting ads...'
+2026-06-26 00:00:42,238 - app.collectors.spotify_community_collector - INFO - [spotify_community] Thread 10/10: 9 replies from 'Issues with Spotify services (login, subscription ...'
+2026-06-26 00:00:43,740 - app.collectors.base_collector - INFO - [spotify_community] Fetched 107 raw items
+2026-06-26 00:00:43,756 - app.collectors.base_collector - INFO - [spotify_community] Done — 0 new records inserted
+2026-06-26 00:00:43,757 - app.collectors.orchestrator - INFO - Concurrent collection complete.
+2026-06-26 00:00:43,757 - app.scheduler.pipeline - INFO - Collection complete: 354 new records
+2026-06-26 00:00:43,757 - app.scheduler.pipeline - INFO - Pipeline Step 2: Classification
+2026-06-26 00:00:43,798 - app.classifier.engine - INFO - Classifying 900 records...
+2026-06-26 00:00:43,798 - app.classifier.engine - INFO - Stopping batch — all API keys exhausted. 0 classified, 900 remaining for next run.
+2026-06-26 00:00:43,798 - app.classifier.engine - INFO - Batch complete: 0 classified, 0 skipped (0.0% of 0 attempted)
+2026-06-26 00:00:43,798 - app.scheduler.pipeline - INFO - Classification complete: 0 records classified
+2026-06-26 00:00:43,798 - app.scheduler.pipeline - INFO - Pipeline Step 3: Embedding
+2026-06-26 00:00:43,831 - app.embeddings.embed_pipeline - INFO - No records met the minimum length for embedding.
+2026-06-26 00:00:43,831 - app.scheduler.pipeline - INFO - Embedding complete: 0 records embedded
+2026-06-26 00:00:43,831 - app.scheduler.pipeline - INFO - Pipeline Step 4: Clustering
+2026-06-26 00:00:43,833 - app.clustering.engine - INFO - Clustering field: topic
+2026-06-26 00:01:00,253 - app.clustering.engine - INFO - Deleted 18 old 'topic' clusters.
+2026-06-26 00:01:00,256 - app.clustering.engine - INFO -   topic: 18 clusters, 302 noise points from 499 values
+2026-06-26 00:01:00,257 - app.clustering.engine - INFO - Clustering field: core_complaint
+2026-06-26 00:01:05,072 - app.clustering.engine - INFO - Deleted 9 old 'core_complaint' clusters.
+2026-06-26 00:01:05,074 - app.clustering.engine - INFO -   core_complaint: 9 clusters, 200 noise points from 335 values
+2026-06-26 00:01:05,076 - app.clustering.engine - INFO - Clustering field: behaviour_pattern
+2026-06-26 00:01:06,301 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-26 00:01:08,718 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-26 00:01:11,122 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-26 00:01:13,365 - app.clustering.engine - INFO - Deleted 6 old 'behaviour_pattern' clusters.
+2026-06-26 00:01:13,367 - app.clustering.engine - INFO -   behaviour_pattern: 6 clusters, 77 noise points from 216 values
+2026-06-26 00:01:13,367 - app.clustering.engine - INFO - Clustering field: unmet_need
+2026-06-26 00:01:14,407 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-26 00:01:17,029 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-26 00:01:19,538 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-26 00:01:21,820 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-26 00:01:24,200 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-26 00:01:26,601 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-26 00:01:29,143 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-26 00:01:31,554 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-06-26 00:01:33,859 - app.clustering.engine - INFO - Deleted 8 old 'unmet_need' clusters.
+2026-06-26 00:01:33,861 - app.clustering.engine - INFO -   unmet_need: 8 clusters, 239 noise points from 331 values
+2026-06-26 00:01:33,862 - app.clustering.engine - INFO - Clustering complete: 41 clusters across 4 fields.
+2026-06-26 00:01:33,862 - app.scheduler.pipeline - INFO - Clustering complete: 0 clusters found
+2026-06-26 00:01:33,863 - app.scheduler.pipeline - INFO - Pipeline Step 5: Delta Summary
+2026-06-26 00:01:33,877 - app.scheduler.pipeline - INFO - Delta summary complete
+2026-06-26 00:01:33,877 - app.scheduler.pipeline - INFO - Nightly Pipeline finished in 93.79 seconds with 0 errors
+INFO:     127.0.0.1:62596 - "GET /static/themes.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:62596 - "GET /static/js/themes-page.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:62599 - "GET /static/js/themes-shared.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:62602 - "GET /static/css/styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:62602 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62602 - "GET /static/chat.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:62602 - "GET /static/js/chat.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:62602 - "GET /api/chat/suggest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62602 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62602 - "GET /static/themes.html HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62649 - "GET /static/js/themes-page.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62647 - "GET /static/js/themes-shared.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62602 - "GET /static/css/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62647 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62647 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62647 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:62647 - "GET /static/js/dashboard.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:62647 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62602 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62649 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62660 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62659 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62659 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62659 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62701 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62659 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62697 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62703 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62702 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62702 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63019 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63035 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63019 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63021 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63038 - "GET /api/dashboard/quotes?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63037 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63037 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64135 - "GET /api/dashboard/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64136 - "GET /api/dashboard/topics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64137 - "GET /api/dashboard/complaints HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64138 - "GET /api/dashboard/workarounds HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64139 - "GET /api/dashboard/quotes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64140 - "GET /api/dashboard/trends HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64141 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64142 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64145 - "GET /api/dashboard/themes HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:04<00:00,  4.03s/it]Batches: 100%|██████████| 1/1 [00:04<00:00,  4.03s/it]
+INFO:     127.0.0.1:64147 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.51it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.50it/s]
+INFO:     127.0.0.1:64152 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [98684]
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

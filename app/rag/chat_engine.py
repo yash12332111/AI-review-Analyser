@@ -1,0 +1,209 @@
+import re
+import logging
+from typing import List, Dict, Any
+from groq import Groq
+
+from app.config.settings import settings
+from app.retrieval.retriever import FeedbackRetriever
+from app.models.feedback import ChatFilters, ClassifiedFeedback
+
+logger = logging.getLogger(__name__)
+
+SYSTEM_PROMPT = """You are a user research assistant for a music product team.
+You answer questions by synthesizing insights from real user feedback.
+
+RULES:
+1. Answer ONLY from the provided review context.
+2. Ground every claim in specific user quotes from the provided context.
+3. Cite quotes using [Source: platform, Sentiment: value, Date: date] format.
+4. If the provided context doesn't cover the question or lacks enough information, say so plainly. Do not attempt to guess or use outside knowledge.
+5. Identify patterns across multiple quotes when possible.
+6. NEVER invent, fabricate, or hallucinate facts, numbers, or quotes. Only use EXACT text from the provided context.
+7. Structure your answers with clear sections when addressing complex questions.
+8. Keep your answer concise — aim for 300-500 words. Use bullet points for clarity.
+"""
+
+class ChatEngine:
+    def __init__(self, retriever: FeedbackRetriever):
+        # We use the first key or fall back to single GROQ_API_KEY if rotation was not passed
+        api_key = settings.GROQ_API_KEY
+        if hasattr(settings, "GROQ_API_KEYS") and settings.GROQ_API_KEYS:
+            api_key = settings.GROQ_API_KEYS.split(",")[0].strip()
+        self.client = Groq(api_key=api_key)
+        self.retriever = retriever
+
+    async def answer(self, question: str, filters: ChatFilters) -> dict:
+        # 0. Intent routing
+        intent_prompt = (
+            "Classify the user's intent into exactly one of two categories:\n"
+            "1) 'conversational': greetings, chit-chat, reactions (cool, nice, thanks), or off-topic messages.\n"
+            "2) 'research': questions or requests about user feedback, features, frustrations, music discovery, or reviews.\n\n"
+            "Return ONLY the single word 'conversational' or 'research'. Do not include any other text, punctuation, or explanation."
+        )
+        try:
+            logger.info(f"--- ENTERING INTENT ROUTING for question: '{question}' ---")
+            intent_res = self.client.chat.completions.create(
+                model=settings.GROQ_MODEL,
+                messages=[
+                    {"role": "system", "content": intent_prompt},
+                    {"role": "user", "content": question}
+                ],
+                temperature=0.0,
+                max_tokens=10
+            )
+            intent_raw = intent_res.choices[0].message.content
+            intent = re.sub(r'[^a-zA-Z]', '', intent_raw).lower()
+            logger.info(f"--- CLASSIFIER RAW OUTPUT: '{intent_raw}' -> PARSED: '{intent}' ---")
+            
+            if intent != "research":
+                conv_res = self.client.chat.completions.create(
+                    model=settings.GROQ_MODEL,
+                    messages=[
+                        {"role": "system", "content": "You are a friendly research assistant for a music product team. Respond briefly, naturally, and politely to the user's conversational message. Do not cite sources or invent feedback."},
+                        {"role": "user", "content": question}
+                    ],
+                    temperature=0.5,
+                    max_tokens=150
+                )
+                return {
+                    "answer": conv_res.choices[0].message.content.strip(),
+                    "sources": [],
+                    "metadata": {"records_retrieved": 0, "intent": "conversational"}
+                }
+        except Exception as e:
+            logger.error(f"Groq API error during intent routing or conversational generation: {e}")
+            return {
+                "answer": "The assistant is temporarily unavailable — please try again in a moment.",
+                "sources": [],
+                "metadata": {"records_retrieved": 0, "error": str(e)}
+            }
+
+        # 1. Retrieve relevant feedback
+        records = self.retriever.hybrid_search(question, filters, top_k=20)
+        
+        if not records:
+            return {
+                "answer": "I couldn't find any user feedback matching your question and filters. Try broadening your filters or rephrasing your question.",
+                "sources": [],
+                "metadata": {"records_retrieved": 0}
+            }
+
+        # 1.5 Relevance Thresholding
+        RELEVANCE_THRESHOLD = 0.65
+        where = self.retriever._build_chroma_filter(filters) if filters else None
+        top_semantic = self.retriever.ep.query(text=question, n_results=1, where=where)
+        best_distance = top_semantic[0]["distance"] if top_semantic and top_semantic[0].get("distance") is not None else 999.0
+        
+        logger.info(f"--- TOP SEMANTIC DISTANCE: {best_distance} ---")
+        if best_distance > RELEVANCE_THRESHOLD:
+            return {
+                "answer": "I don't have enough relevant feedback in the corpus to answer that confidently. Please try broadening your search or rephrasing your question.",
+                "sources": [],
+                "metadata": {"records_retrieved": len(records), "best_distance": best_distance}
+            }
+
+        # 2. Build context
+        context_str = self._build_context(records)
+        
+        # 3. Construct messages
+        messages = self._build_messages(context_str, question)
+        
+        # 4. Call Groq API
+        try:
+            response = self.client.chat.completions.create(
+                model=settings.GROQ_MODEL,
+                messages=messages,
+                temperature=0.3,
+                max_tokens=1500
+            )
+            raw_answer = response.choices[0].message.content
+        except Exception as e:
+            logger.error(f"Groq API error in RAG chat generation: {e}")
+            return {
+                "answer": "The assistant is temporarily unavailable — please try again in a moment.",
+                "sources": [],
+                "metadata": {"records_retrieved": len(records), "error": str(e)}
+            }
+            
+        # 5. Validate quotes
+        validated_answer = self._validate_quotes(raw_answer, records)
+        
+        # Safety net: If the generated answer indicates no relevant information, force sources to empty.
+        lower_answer = validated_answer.lower()
+        if "[no relevant quotes available]" in lower_answer or \
+           "doesn't cover the question" in lower_answer or \
+           "not enough information" in lower_answer or \
+           "no information" in lower_answer or \
+           "no relevant feedback" in lower_answer:
+            records = []
+        
+        sources = []
+        for r in records:
+            sources.append({
+                "quote": r.content,
+                "quote_translated": r.quote_translated,
+                "source": r.source,
+                "sentiment": r.sentiment,
+                "date": r.posted_at.isoformat() if r.posted_at else None,
+                "country": r.country
+            })
+            
+        return {
+            "answer": validated_answer,
+            "sources": sources,
+            "metadata": {"records_retrieved": len(records)}
+        }
+
+    def _build_context(self, records: List[ClassifiedFeedback]) -> str:
+        parts = []
+        for idx, r in enumerate(records, 1):
+            date_str = r.posted_at.strftime('%Y-%m-%d') if r.posted_at else 'Unknown'
+            content = r.content
+            if r.quote_translated:
+                content += f" (English translation: {r.quote_translated})"
+            
+            parts.append(f"Review {idx}:\nText: {content}\nSource: {r.source}\nSentiment: {r.sentiment}\nDate: {date_str}\n")
+        return "\n".join(parts)
+
+    def _build_messages(self, context: str, question: str) -> List[dict]:
+        return [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": f"Context records:\n{context}\n\nQuestion: {question}"}
+        ]
+
+    def _validate_quotes(self, answer: str, records: List[ClassifiedFeedback]) -> str:
+        # Extract quoted strings (between standard double quotes)
+        quotes = re.findall(r'"([^"]*)"', answer)
+        
+        for q in quotes:
+            if len(q.strip()) < 10:
+                continue # Skip small words or phrases
+            
+            q_norm = re.sub(r'\s+', ' ', q.lower().strip())
+            found = False
+            for r in records:
+                r_norm = re.sub(r'\s+', ' ', r.content.lower().strip())
+                if q_norm in r_norm:
+                    found = True
+                    break
+                if r.quote_translated:
+                    rt_norm = re.sub(r'\s+', ' ', r.quote_translated.lower().strip())
+                    if q_norm in rt_norm:
+                        found = True
+                        break
+            
+            if not found:
+                # Replace hallucinated quote
+                answer = answer.replace(f'"{q}"', '[quote could not be verified]')
+                
+        return answer
+
+    def get_suggested_questions(self) -> List[str]:
+        return [
+            "Why do users complain about Discover Weekly?",
+            "What frustrates users most about shuffle?",
+            "Why do users keep repeating the same songs?",
+            "What are the main workarounds users have for finding new music?",
+            "Are there different challenges between iOS and Android users?",
+            "What are consistent unmet needs across different sources?"
+        ]
