@@ -8,6 +8,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let isWaiting = false;
 
+    // Wake up Render's free-tier backend if it's sleeping.
+    // Shows a status pill in the chat thread while waiting.
+    async function ensureBackendAwake() {
+        const MAX_TRIES = 8;
+        const POLL_MS   = 7000;
+
+        let wakeMsg = null;
+
+        for (let i = 0; i < MAX_TRIES; i++) {
+            try {
+                const res = await fetch(`${BACKEND_URL}/api/health`, { method: 'GET' });
+                if (res.ok) {
+                    if (wakeMsg) wakeMsg.remove();
+                    return true;   // backend is up
+                }
+            } catch (_) { /* network error — keep trying */ }
+
+            // Show / update the wake-up pill on first failure
+            if (!wakeMsg) {
+                wakeMsg = document.createElement('div');
+                wakeMsg.className = 'message ai';
+                wakeMsg.innerHTML = `<div class="bubble" style="background:#fffbe8;border:1px solid #f0d96e;color:#7a6200;font-size:13px;padding:12px 16px;">
+                    ⏳ <strong>Server is waking up</strong> — Render's free tier sleeps when idle.<br>
+                    <span id="wake-countdown">This usually takes 30–60 seconds. Please wait…</span>
+                </div>`;
+                chatThread.appendChild(wakeMsg);
+                chatThread.scrollTop = chatThread.scrollHeight;
+            } else {
+                const cd = wakeMsg.querySelector('#wake-countdown');
+                if (cd) cd.textContent = `Still warming up… attempt ${i + 1}/${MAX_TRIES}`;
+            }
+
+            await new Promise(r => setTimeout(r, POLL_MS));
+        }
+
+        // Backend never came up
+        if (wakeMsg) {
+            wakeMsg.querySelector('.bubble').innerHTML = '❌ The server could not be reached. Please try again in a minute.';
+        }
+        return false;
+    }
+
     // Load suggestions
     fetch(`${BACKEND_URL}/api/chat/suggest`)
         .then(res => res.json())
@@ -119,6 +161,15 @@ document.addEventListener('DOMContentLoaded', () => {
         isWaiting = true;
         sendBtn.disabled = true;
         showLoading();
+
+        // Wake up Render free-tier if needed before actually sending
+        const backendReady = await ensureBackendAwake();
+        if (!backendReady) {
+            hideLoading();
+            isWaiting = false;
+            sendBtn.disabled = false;
+            return;
+        }
 
         try {
             const response = await fetch(`${BACKEND_URL}/api/chat`, {
