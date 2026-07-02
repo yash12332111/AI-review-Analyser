@@ -19,9 +19,6 @@ Design notes (from Architecture.md §4.2 / implementation_plan.md Task 4.1):
 import logging
 from typing import Optional, List, Dict, Any
 
-from sentence_transformers import SentenceTransformer
-import chromadb
-
 from app.config.settings import settings
 from app.models.feedback import ClassifiedFeedback
 
@@ -40,6 +37,10 @@ class EmbeddingPipeline:
         model_name: Optional[str] = None,
         persist_dir: Optional[str] = None,
     ):
+        # Lazy import to prevent PyTorch and ONNXRuntime from blocking FastApi startup
+        from sentence_transformers import SentenceTransformer
+        import chromadb
+
         model_name = model_name or settings.EMBEDDING_MODEL
         persist_dir = persist_dir or settings.CHROMA_PERSIST_DIR
 
