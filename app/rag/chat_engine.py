@@ -88,20 +88,6 @@ class ChatEngine:
                 "metadata": {"records_retrieved": 0}
             }
 
-        # 1.5 Relevance Thresholding
-        RELEVANCE_THRESHOLD = 0.65
-        where = self.retriever._build_chroma_filter(filters) if filters else None
-        top_semantic = self.retriever.ep.query(text=question, n_results=1, where=where)
-        best_distance = top_semantic[0]["distance"] if top_semantic and top_semantic[0].get("distance") is not None else 999.0
-        
-        logger.info(f"--- TOP SEMANTIC DISTANCE: {best_distance} ---")
-        if best_distance > RELEVANCE_THRESHOLD:
-            return {
-                "answer": "I don't have enough relevant feedback in the corpus to answer that confidently. Please try broadening your search or rephrasing your question.",
-                "sources": [],
-                "metadata": {"records_retrieved": len(records), "best_distance": best_distance}
-            }
-
         # 2. Build context
         context_str = self._build_context(records)
         
