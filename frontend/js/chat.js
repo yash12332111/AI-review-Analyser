@@ -158,14 +158,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
+            // 90-second timeout — embedding model can take ~60s on first load
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 90000);
+
+            // Show a "still thinking" hint after 15s so the user doesn't wonder
+            const thinkingHint = setTimeout(() => {
+                const loadingBubble = chatThread.querySelector('.loading-msg .bubble');
+                if (loadingBubble) loadingBubble.innerHTML += '<br><span style="font-size:12px;color:#9b998e">Still thinking — this can take up to 60 s on the first question…</span>';
+            }, 15000);
+
             const response = await fetch(`${BACKEND_URL}/api/chat`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: text, filters: filters })
+                body: JSON.stringify({ message: text, filters: filters }),
+                signal: controller.signal
             });
 
+            clearTimeout(timeoutId);
+            clearTimeout(thinkingHint);
+
             if (!response.ok) {
-                throw new Error("Server error");
+                throw new Error(`Server error: ${response.status}`);
             }
 
             const data = await response.json();
