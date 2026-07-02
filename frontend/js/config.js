@@ -11,4 +11,4 @@
  * prepends this value to the path, so changing it here is the only
  * edit required when moving between environments.
  */
-const BACKEND_URL = '';   // ← replace with Render URL after deployment
+const BACKEND_URL = 'https://ai-review-analyser.onrender.com';   // ← replace with Render URL after deployment
