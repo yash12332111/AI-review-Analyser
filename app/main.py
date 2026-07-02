@@ -1,6 +1,4 @@
 import os
-import asyncio
-import logging
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
@@ -11,8 +9,6 @@ from app.config.settings import settings
 from app.config.logging_config import setup_logging
 from app.scheduler.scheduler import start_scheduler, scheduler
 
-logger = logging.getLogger(__name__)
-
 setup_logging()
 
 @asynccontextmanager
@@ -20,27 +16,15 @@ async def lifespan(app: FastAPI):
     # Startup
     db = DatabaseManager(settings.SQLITE_DB_PATH)
     db.initialize()
-    db.close() # Initialize schema and close this transient connection
+    db.close()  # Initialize schema and close this transient connection
 
     start_scheduler()
-
-    # Pre-warm the embedding model in a background thread so the first
-    # chat request doesn't block for 30-60 seconds while it loads.
-    async def _prewarm():
-        try:
-            logger.info("Pre-warming embedding model in background…")
-            from app.api.chat_routes import get_chat_engine
-            await asyncio.get_event_loop().run_in_executor(None, get_chat_engine)
-            logger.info("Embedding model pre-warm complete.")
-        except Exception as e:
-            logger.warning(f"Embedding pre-warm failed (non-fatal): {e}")
-
-    asyncio.create_task(_prewarm())
-
     yield
     # Shutdown
     if scheduler.running:
         scheduler.shutdown()
+
+
 
 app = FastAPI(title="AI Review Analyser", version="1.0.0", lifespan=lifespan)
 
