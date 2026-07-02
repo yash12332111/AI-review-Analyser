@@ -8,10 +8,14 @@ logger = logging.getLogger(__name__)
 
 scheduler = AsyncIOScheduler()
 
-def start_scheduler():
+async def run_nightly_pipeline_job():
+    """Lazily instantiated so we don't load the embedding model on server boot."""
     pipeline = NightlyPipeline()
+    await pipeline.run()
+
+def start_scheduler():
     scheduler.add_job(
-        pipeline.run,
+        run_nightly_pipeline_job,
         trigger=CronTrigger(hour=settings.COLLECTION_HOUR, minute=settings.COLLECTION_MINUTE),
         id="nightly_pipeline",
         name="Nightly Feedback Pipeline",
