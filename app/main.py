@@ -28,9 +28,9 @@ app = FastAPI(title="AI Review Analyser", version="1.0.0", lifespan=lifespan)
 
 # ---------------------------------------------------------------------------
 # CORS — allow the Vercel frontend to call this API.
-# Set ALLOWED_ORIGINS in the Render environment as a comma-separated list,
-# e.g.  https://your-app.vercel.app,https://your-custom-domain.com
-# Falls back to localhost origins for local development.
+# allow_origin_regex covers all Vercel preview URLs (*.vercel.app) so that
+# every preview deployment works without needing to whitelist it manually.
+# Set ALLOWED_ORIGINS in Render env for any extra origins (comma-separated).
 # ---------------------------------------------------------------------------
 _raw_origins = os.environ.get(
     "ALLOWED_ORIGINS",
@@ -41,6 +41,7 @@ allowed_origins = [o.strip() for o in _raw_origins.split(",") if o.strip()]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
