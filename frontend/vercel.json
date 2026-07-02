@@ -1,9 +1,4 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
-  "routes": [
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/themes", "dest": "/themes.html" },
-    { "src": "/chat", "dest": "/chat.html" }
-  ]
+  "trailingSlash": false
 }
