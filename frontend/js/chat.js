@@ -50,23 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return false;
     }
 
-    // Load suggestions
-    fetch(`${BACKEND_URL}/api/chat/suggest`)
-        .then(res => res.json())
-        .then(data => {
-            const suggestions = data.suggestions || [];
-            suggestions.forEach(q => {
-                const btn = document.createElement('button');
-                btn.className = 'suggestion-btn';
-                btn.textContent = q;
-                btn.onclick = () => {
-                    chatInput.value = q;
-                    sendMessage();
-                };
-                suggestionsContainer.appendChild(btn);
-            });
-        })
-        .catch(err => console.error("Error loading suggestions:", err));
+    // Suggestion buttons are hardcoded in chat.html for instant display.
+    // Clicking them dispatches an Enter keydown which triggers sendMessage via the listener below.
+
 
     function createMessageElement(type, content) {
         const msgDiv = document.createElement('div');

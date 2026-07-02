@@ -262,7 +262,12 @@
               Hello! I'm your AI Research Assistant. Ask me anything about user feedback regarding music discovery, frustrations, or behaviors.
               
               <div id="suggestions-container" class="suggestions-grid">
-                  <!-- JS populates suggestions here -->
+                  <button class="suggestion-btn" onclick="document.getElementById('chat-input').value=this.textContent;document.getElementById('chat-input').dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}))">Why do users complain about Discover Weekly?</button>
+                  <button class="suggestion-btn" onclick="document.getElementById('chat-input').value=this.textContent;document.getElementById('chat-input').dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}))">What frustrates users most about shuffle?</button>
+                  <button class="suggestion-btn" onclick="document.getElementById('chat-input').value=this.textContent;document.getElementById('chat-input').dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}))">Why do users keep hearing the same songs?</button>
+                  <button class="suggestion-btn" onclick="document.getElementById('chat-input').value=this.textContent;document.getElementById('chat-input').dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}))">What workarounds do users use to find new music?</button>
+                  <button class="suggestion-btn" onclick="document.getElementById('chat-input').value=this.textContent;document.getElementById('chat-input').dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}))">Are there different challenges between iOS and Android users?</button>
+                  <button class="suggestion-btn" onclick="document.getElementById('chat-input').value=this.textContent;document.getElementById('chat-input').dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}))">What are consistent unmet needs across different sources?</button>
               </div>
           </div>
       </div>
