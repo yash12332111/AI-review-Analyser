@@ -35,8 +35,39 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set theme colors for charts
     Chart.defaults.color = '#8d8a7f';
     Chart.defaults.font.family = "'Figtree', sans-serif";
-    fetchDashboardData();
+    ensureDashboardBackendAwake();
 });
+
+// Wake up Render free-tier backend with visible banner + auto-retry.
+async function ensureDashboardBackendAwake() {
+    const MAX_TRIES = 10;
+    const POLL_MS   = 7000;
+    let banner = null;
+
+    for (let i = 0; i < MAX_TRIES; i++) {
+        try {
+            const res = await fetch(`${BACKEND_URL}/api/health`);
+            if (res.ok) {
+                if (banner) banner.remove();
+                fetchDashboardData();
+                return;
+            }
+        } catch (_) {}
+
+        if (!banner) {
+            banner = document.createElement('div');
+            banner.id = 'wake-banner';
+            banner.style.cssText = 'position:fixed;top:64px;left:0;right:0;z-index:100;background:#fffbe8;border-bottom:1px solid #f0d96e;color:#7a6200;font-family:Figtree,sans-serif;font-size:13px;padding:10px 24px;display:flex;align-items:center;gap:10px;';
+            banner.innerHTML = '<span style="font-size:16px">⏳</span> <span><strong>Server is waking up</strong> — Render\'s free tier sleeps when idle. Data will load automatically in ~30–60 seconds…</span>';
+            document.body.appendChild(banner);
+        }
+
+        await new Promise(r => setTimeout(r, POLL_MS));
+    }
+
+    if (banner) banner.innerHTML = '<span style="font-size:16px">❌</span> <span>Server could not be reached. Please <a href="javascript:location.reload()">refresh the page</a> to try again.</span>';
+}
+
 
 function getFilterParams() {
     const params = new URLSearchParams();
