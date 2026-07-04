@@ -8,7 +8,9 @@ services:
       - key: GROQ_API_KEY
         sync: false          # Fill in Render dashboard
       - key: GROQ_API_KEYS
-        sync: false          # Optional — comma-separated keys for rotation
+        sync: false          # Comma-separated keys used by the nightly pipeline (2 keys)
+      - key: GROQ_CHAT_API_KEY
+        sync: false          # Dedicated key for RAG chatbot — isolated from pipeline quota
       - key: ALLOWED_ORIGINS
         sync: false          # e.g. https://your-app.vercel.app
       - key: SQLITE_DB_PATH

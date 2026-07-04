@@ -25,10 +25,16 @@ RULES:
 
 class ChatEngine:
     def __init__(self, retriever: FeedbackRetriever):
-        # We use the first key or fall back to single GROQ_API_KEY if rotation was not passed
-        api_key = settings.GROQ_API_KEY
-        if hasattr(settings, "GROQ_API_KEYS") and settings.GROQ_API_KEYS:
-            api_key = settings.GROQ_API_KEYS.split(",")[0].strip()
+        # Priority: GROQ_CHAT_API_KEY (dedicated chat key) → first key in GROQ_API_KEYS → GROQ_API_KEY
+        if settings.GROQ_CHAT_API_KEY:
+            api_key = settings.GROQ_CHAT_API_KEY
+            logger.info("ChatEngine: using dedicated GROQ_CHAT_API_KEY")
+        elif hasattr(settings, "GROQ_API_KEYS") and settings.GROQ_API_KEYS:
+            api_key = settings.GROQ_API_KEYS.split(",")[-1].strip()  # Use LAST key (pipeline uses first)
+            logger.info("ChatEngine: GROQ_CHAT_API_KEY not set, falling back to last key in GROQ_API_KEYS")
+        else:
+            api_key = settings.GROQ_API_KEY
+            logger.info("ChatEngine: falling back to GROQ_API_KEY")
         self.client = Groq(api_key=api_key)
         self.retriever = retriever
 

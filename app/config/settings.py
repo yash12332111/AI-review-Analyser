@@ -7,7 +7,8 @@ from pathlib import Path
 class Settings(BaseSettings):
     # API Keys
     GROQ_API_KEY: str = ""
-    GROQ_API_KEYS: str = ""
+    GROQ_API_KEYS: str = ""          # Comma-separated keys used by the nightly pipeline
+    GROQ_CHAT_API_KEY: str = ""       # Dedicated key for the RAG chatbot (isolated from pipeline)
 
     # Target markets
     APP_STORE_COUNTRIES: List[str] = ["US", "GB", "IN", "BR", "DE"]
