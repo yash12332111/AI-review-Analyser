@@ -1,7 +1,7 @@
 import re
 import logging
 from typing import List, Dict, Any
-from groq import Groq
+from groq import Groq, RateLimitError
 
 from app.config.settings import settings
 from app.retrieval.retriever import FeedbackRetriever
@@ -25,18 +25,44 @@ RULES:
 
 class ChatEngine:
     def __init__(self, retriever: FeedbackRetriever):
-        # Priority: GROQ_CHAT_API_KEY (dedicated chat key) → first key in GROQ_API_KEYS → GROQ_API_KEY
+        # Build a rotation pool of Groq clients.
+        # Priority order: GROQ_CHAT_API_KEY first, then GROQ_API_KEYS, then GROQ_API_KEY.
+        keys: List[str] = []
+
         if settings.GROQ_CHAT_API_KEY:
-            api_key = settings.GROQ_CHAT_API_KEY
-            logger.info("ChatEngine: using dedicated GROQ_CHAT_API_KEY")
-        elif hasattr(settings, "GROQ_API_KEYS") and settings.GROQ_API_KEYS:
-            api_key = settings.GROQ_API_KEYS.split(",")[-1].strip()  # Use LAST key (pipeline uses first)
-            logger.info("ChatEngine: GROQ_CHAT_API_KEY not set, falling back to last key in GROQ_API_KEYS")
-        else:
-            api_key = settings.GROQ_API_KEY
-            logger.info("ChatEngine: falling back to GROQ_API_KEY")
-        self.client = Groq(api_key=api_key)
+            keys.append(settings.GROQ_CHAT_API_KEY)
+
+        if settings.GROQ_API_KEYS:
+            for k in settings.GROQ_API_KEYS.split(","):
+                k = k.strip()
+                if k and k not in keys:
+                    keys.append(k)
+
+        if settings.GROQ_API_KEY and settings.GROQ_API_KEY not in keys:
+            keys.append(settings.GROQ_API_KEY)
+
+        if not keys:
+            raise ValueError("No Groq API keys configured. Set GROQ_CHAT_API_KEY or GROQ_API_KEYS.")
+
+        self.clients = [Groq(api_key=k) for k in keys]
+        self._key_index = 0
+        logger.info(f"ChatEngine: initialized with {len(self.clients)} key(s) in rotation pool.")
         self.retriever = retriever
+
+    def _call_with_rotation(self, **kwargs) -> Any:
+        """Try each client in the pool; rotate on 429 RateLimitError."""
+        last_error = None
+        for _ in range(len(self.clients)):
+            client = self.clients[self._key_index]
+            try:
+                return client.chat.completions.create(**kwargs)
+            except RateLimitError as e:
+                logger.warning(f"ChatEngine key [{self._key_index}] hit rate limit, rotating to next key. Error: {e}")
+                last_error = e
+                self._key_index = (self._key_index + 1) % len(self.clients)
+            except Exception:
+                raise
+        raise last_error
 
     async def answer(self, question: str, filters: ChatFilters) -> dict:
         # 0. Intent routing
@@ -48,7 +74,7 @@ class ChatEngine:
         )
         try:
             logger.info(f"--- ENTERING INTENT ROUTING for question: '{question}' ---")
-            intent_res = self.client.chat.completions.create(
+            intent_res = self._call_with_rotation(
                 model=settings.GROQ_MODEL,
                 messages=[
                     {"role": "system", "content": intent_prompt},
@@ -62,7 +88,7 @@ class ChatEngine:
             logger.info(f"--- CLASSIFIER RAW OUTPUT: '{intent_raw}' -> PARSED: '{intent}' ---")
             
             if intent != "research":
-                conv_res = self.client.chat.completions.create(
+                conv_res = self._call_with_rotation(
                     model=settings.GROQ_MODEL,
                     messages=[
                         {"role": "system", "content": "You are a friendly research assistant for a music product team. Respond briefly, naturally, and politely to the user's conversational message. Do not cite sources or invent feedback."},
@@ -102,7 +128,7 @@ class ChatEngine:
         
         # 4. Call Groq API
         try:
-            response = self.client.chat.completions.create(
+            response = self._call_with_rotation(
                 model=settings.GROQ_MODEL,
                 messages=messages,
                 temperature=0.3,
