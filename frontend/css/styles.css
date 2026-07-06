@@ -726,3 +726,289 @@ select:focus, input[type="text"]:focus {
     padding: 3rem 1rem;
     color: var(--text-muted);
 }
+
+/* ============================================================
+   RESPONSIVE LAYOUT — CSS-only, no JS hooks touched
+   Breakpoints: tablet ≤ 768px  |  mobile ≤ 480px
+   ============================================================ */
+
+/* ── Shared: main container padding ─────────────────────────── */
+@media (max-width: 768px) {
+    main[style*="max-width:1400px"],
+    main.container {
+        padding: 18px 16px 48px !important;
+    }
+}
+@media (max-width: 480px) {
+    main[style*="max-width:1400px"],
+    main.container {
+        padding: 12px 12px 40px !important;
+    }
+}
+
+/* ── Navigation ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    header {
+        gap: 10px !important;
+        padding: 0 16px !important;
+        flex-wrap: wrap;
+        height: auto !important;
+        min-height: 56px;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+    }
+    /* Hide logo subtitle on tablet */
+    header > div > div > div:nth-child(2) {
+        display: none;
+    }
+    /* Shrink nav links */
+    header nav a {
+        font-size: 12px !important;
+        padding: 6px 10px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 6px !important;
+        padding: 8px 12px !important;
+    }
+    /* Nav takes full row */
+    header nav {
+        width: 100% !important;
+        justify-content: space-between;
+    }
+    header nav a {
+        flex: 1 1 0;
+        text-align: center;
+        font-size: 11px !important;
+        padding: 7px 4px !important;
+    }
+}
+
+/* ── Dashboard: KPI row (3-col → 2-col → 1-col) ─────────────── */
+@media (max-width: 768px) {
+    #dashboard-content > div:first-child {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    /* Sentiment + complaints (340px/1fr) → 1 col */
+    #dashboard-content > div:nth-child(2) {
+        grid-template-columns: 1fr !important;
+    }
+    /* Topics + workarounds (1fr/1fr) → 1 col */
+    #dashboard-content > div:nth-child(3) {
+        grid-template-columns: 1fr !important;
+    }
+    /* Verbatim quotes grid → 1 col */
+    #quotes-container {
+        grid-template-columns: 1fr !important;
+    }
+    /* Complaints + workarounds: remove fixed max-height so content is scrollable */
+    #complaints-container,
+    #workarounds-container {
+        max-height: 320px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #dashboard-content > div:first-child {
+        grid-template-columns: 1fr !important;
+    }
+    #stat-total,
+    #stat-sources,
+    #stat-negative-pct {
+        font-size: 26px !important;
+    }
+}
+
+/* ── Dashboard: filter bar selects ──────────────────────────── */
+@media (max-width: 768px) {
+    #filter-date, #filter-source, #filter-country,
+    #filter-sentiment, #filter-discovery {
+        flex: 1 1 130px;
+        min-width: 0;
+        max-width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    #filter-date, #filter-source, #filter-country,
+    #filter-sentiment, #filter-discovery {
+        flex: 1 1 100%;
+        height: 38px;
+    }
+}
+
+/* ── Dashboard: chart heights ────────────────────────────────── */
+@media (max-width: 480px) {
+    .chart-container {
+        height: 220px !important;
+    }
+}
+
+/* ── Discovery Themes: header + tab strip ───────────────────── */
+@media (max-width: 768px) {
+    .themes-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+    }
+    .theme-tabs {
+        flex-wrap: wrap !important;
+        width: 100% !important;
+    }
+    .theme-tab {
+        flex: 1 1 auto !important;
+        text-align: center !important;
+        min-height: 44px;
+        font-size: 12.5px !important;
+    }
+}
+@media (max-width: 480px) {
+    .theme-tab {
+        font-size: 12px !important;
+        padding: 7px 8px !important;
+    }
+}
+
+/* ── Discovery Themes: master-detail grid (380px/1fr → stack) ── */
+@media (max-width: 768px) {
+    /* Inline grid in themes.html */
+    div[style*="grid-template-columns:380px"] {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 14px;
+    }
+    /* Detail panel: un-sticky so it flows below list */
+    #page-theme-detail,
+    .theme-detail {
+        position: static !important;
+        top: auto !important;
+    }
+    /* Theme list: let all items show, scrollable */
+    #page-theme-list,
+    .theme-list {
+        max-height: 360px !important;
+        overflow-y: auto !important;
+    }
+}
+
+/* Themes page header row: stack on mobile */
+@media (max-width: 768px) {
+    div[style*="justify-content:space-between"][style*="flex-wrap:wrap"] {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+    }
+    /* Category tab bar inside themes header */
+    div[style*="gap:4px"][style*="border-radius:12px"] {
+        flex-wrap: wrap !important;
+        width: 100% !important;
+    }
+    /* Individual theme-tab buttons (inline styled) */
+    button[class*="theme-tab"] {
+        flex: 1 1 auto !important;
+        text-align: center !important;
+        min-height: 44px;
+        white-space: normal !important;
+    }
+}
+
+/* ── Research Chat: layout ───────────────────────────────────── */
+@media (max-width: 768px) {
+    .chat-layout {
+        padding: 14px 16px 0 !important;
+        gap: 12px !important;
+    }
+}
+@media (max-width: 480px) {
+    .chat-layout {
+        padding: 10px 12px 0 !important;
+        gap: 10px !important;
+        height: calc(100dvh - 100px) !important;
+    }
+}
+
+/* ── Research Chat: suggestion chips ────────────────────────── */
+@media (max-width: 768px) {
+    .suggestion-btn {
+        font-size: 12.5px !important;
+        padding: 9px 12px !important;
+        min-height: 44px;
+    }
+}
+@media (max-width: 480px) {
+    .suggestions-grid {
+        gap: 7px !important;
+    }
+    .suggestion-btn {
+        flex: 1 1 calc(50% - 7px);
+        font-size: 12px !important;
+        padding: 8px 10px !important;
+    }
+}
+
+/* ── Research Chat: user bubble ─────────────────────────────── */
+@media (max-width: 480px) {
+    .message.user .bubble {
+        max-width: 92% !important;
+        font-size: 13.5px !important;
+    }
+}
+
+/* ── Research Chat: composer / input bar ────────────────────── */
+@media (max-width: 768px) {
+    /* Targets the sticky composer div via its id'd child */
+    #send-btn {
+        height: 40px;
+        padding: 0 16px;
+        font-size: 13.5px;
+    }
+}
+@media (max-width: 480px) {
+    #send-btn {
+        height: 38px !important;
+        padding: 0 14px !important;
+        font-size: 13px !important;
+        border-radius: 10px !important;
+    }
+    #chat-input {
+        font-size: 14px !important;
+    }
+}
+
+/* ── Research Chat: source/citation cards ───────────────────── */
+@media (max-width: 480px) {
+    .source-card {
+        padding: 10px 12px !important;
+    }
+    .source-card-header {
+        flex-wrap: wrap !important;
+        gap: 5px !important;
+    }
+}
+
+/* ── General polish ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+    body { overflow-x: hidden; }
+
+    /* Slightly smaller card radius on mobile */
+    .card { border-radius: 14px; }
+
+    /* Stat value on tablet */
+    .stat-value { font-size: 26px; }
+}
+
+@media (max-width: 480px) {
+    .stat-value { font-size: 22px; }
+    .card { border-radius: 12px; }
+
+    /* Tighten generic card padding */
+    .card { padding: 14px; }
+
+    .complaint-name { font-size: 12.5px; }
+
+    /* Page h1 size */
+    h1 { font-size: 22px !important; }
+}
