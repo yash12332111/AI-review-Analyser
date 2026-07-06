@@ -15,7 +15,7 @@ def get_db():
     finally:
         db.close()
 
-@router.get("")
+@router.api_route("", methods=["GET", "HEAD"])
 async def system_health(db: DatabaseManager = Depends(get_db)) -> Dict[str, Any]:
     # Check DB
     try:
