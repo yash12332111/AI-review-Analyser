@@ -18,8 +18,16 @@ async def lifespan(app: FastAPI):
     db.initialize()
     db.close()  # Initialize schema and close this transient connection
 
-    start_scheduler()
+    if settings.ENABLE_SCHEDULER:
+        start_scheduler()
+    else:
+        import logging
+        logging.getLogger(__name__).info(
+            "Scheduler disabled (ENABLE_SCHEDULER=false). Nightly pipeline will NOT run automatically."
+        )
+
     yield
+
     # Shutdown
     if scheduler.running:
         scheduler.shutdown()

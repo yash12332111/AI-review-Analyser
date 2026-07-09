@@ -13,6 +13,8 @@ services:
         sync: false          # Dedicated key for RAG chatbot — isolated from pipeline quota
       - key: ALLOWED_ORIGINS
         sync: false          # e.g. https://your-app.vercel.app
+      - key: ENABLE_SCHEDULER
+        value: "false"       # Disabled on Render to prevent OOM from embedding model
       - key: SQLITE_DB_PATH
         value: data/feedback.db
       - key: CHROMA_PERSIST_DIR

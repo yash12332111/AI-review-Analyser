@@ -28,6 +28,7 @@ class Settings(BaseSettings):
     MIN_PATTERN_SAMPLE: int = 10
 
     # Scheduler
+    ENABLE_SCHEDULER: bool = True   # Set to false in Render env to disable nightly pipeline
     COLLECTION_HOUR: int = 0
     COLLECTION_MINUTE: int = 0
 
